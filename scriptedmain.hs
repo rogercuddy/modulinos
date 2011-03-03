@@ -8,5 +8,6 @@ main = do
 	program <- getProgName
 	args <- getArgs
 
-	putStrLn $ "Program: " ++ show program
-	mapM_ (\x -> putStrLn $ "Arg: " ++ show x) args
+	putStrLn $ "Number of Args: " ++ (show . length) args
+	putStrLn $ "Program: " ++ program
+	mapM_ (\x -> putStrLn $ "Arg: " ++ x) args

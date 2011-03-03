@@ -1,9 +1,9 @@
 #!/usr/bin/env lua
 
 function main(arg)
-	print("Program: " .. debug.getinfo(1).source)
-
 	print("Number of Args: " .. #arg)
+
+	print("Program: " .. debug.getinfo(1).source)
 
 	for i,a in ipairs(arg) do
 		print("Arg: " .. a)
