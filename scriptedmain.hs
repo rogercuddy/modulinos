@@ -1,13 +1,16 @@
 #!/usr/bin/env runhaskell
 
+import System.Directory (getCurrentDirectory)
 import System (getProgName, getArgs)
 import Control.Monad (mapM_)
 
 main :: IO ()
 main = do
+	directory <- getCurrentDirectory
 	program <- getProgName
 	args <- getArgs
 
-	putStrLn $ "Number of Args: " ++ (show . length) args
+	putStrLn $ "Directory: " ++ directory
 	putStrLn $ "Program: " ++ program
+	putStrLn $ "Number of Args: " ++ (show . length) args
 	mapM_ (\x -> putStrLn $ "Arg: " ++ x) args

@@ -3,9 +3,11 @@
 (context 'SCRIPTED-MAIN)
 
 (define (main)
-	(println "Number of Args: " (length (main-args)))
+	(println "Directory: " (real-path))
 
 	(println "Program: " (main-args 1))
+
+	(println "Number of Args: " (length (main-args)))
 
 	(map (lambda (x) (println "Arg: " x)) (main-args))
 

@@ -1,11 +1,13 @@
 #!/usr/bin/env python
 
-import sys
+import os, sys
 
 def main():
-	print "Number of Args: %d" % len(sys.argv)
+	print "Directory: " + os.getcwd()
 
 	print "Program: " + sys.argv[0]
+
+	print "Number of Args: %d" % len(sys.argv)
 
 	for arg in sys.argv:
 		print "Arg: " + arg

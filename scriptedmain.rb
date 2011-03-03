@@ -1,9 +1,11 @@
 #!/usr/bin/env ruby
 
 def main
-	puts "Number of Args: #{ARGV.length}"
+	puts "Directory: #{Dir.pwd}"
 
 	puts "Program: #{$0}"
+
+	puts "Number of Args: #{ARGV.length}"
 
 	ARGV.each { |arg| puts "Arg: #{arg}" }
 end

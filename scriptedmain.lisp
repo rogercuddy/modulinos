@@ -6,12 +6,24 @@ exit
 
 ;;; Usage: ./scriptedmain.lisp
 
+;;; With help from Rainer Joswig
+;;; http://www.math.utexas.edu/pipermail/maxima/2007/006523.html
+
 (defun main (args)
- (format t "Number of Args: ~a~%" (length args))
+ (format t "Directory: ~a~%"
+  #+clisp (ext:cd)
+  #+lucid (working-directory)
+  #+allegro (excl:current-directory)
+  #+sbcl (progn *default-pathname-defaults*)
+  #+(or :cmucl :scl) (ext:default-directory)
+  #+lispworks (hcl:get-working-directory)
+ )
 
  (format t "Program: ~a~%" (car args))
 
- (loop for arg in (cdr args) do
+ (format t "Number of Args: ~a~%" (length args))
+
+ (loop for arg in args do
   (format t "Arg: ~a~%" arg))
  (quit))
 

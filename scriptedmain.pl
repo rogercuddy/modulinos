@@ -1,14 +1,17 @@
 #!/usr/bin/env perl
 
 use strict;
+use Cwd qw(getcwd);
 
 sub main {
-	print "Number of Args: " . ($#ARGV + 1) . "\n";
+	print "Dirctory: " . getcwd . "\n";
 
 	print "Program: $0\n";
 
+	print "Number of Args: " . ($#ARGV + 1) . "\n";
+
 	foreach my $i (0 .. $#ARGV) {
-		print "$ARGV[$i]\n";
+		print "Arg: $ARGV[$i]\n";
 	}
 }
 

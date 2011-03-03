@@ -1,8 +1,10 @@
 <?php
 function main($args) {
-	echo "Number of Args: " . count($args) . "\n";
+	echo "Directory: " . getcwd() . "\n";
 
 	echo "Program: " . $_SERVER["SCRIPT_NAME"] . "\n";
+
+	echo "Number of Args: " . count($args) . "\n";
 
 	foreach($args as $arg) {
 		echo "Arg: $arg\n";
