@@ -1,0 +1,1 @@
+scriptedmain - Programs that only run main() if they're not loaded as libraries by other programs.
