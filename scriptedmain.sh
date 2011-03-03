@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-if [[ "$0" == *scriptedmain* ]]; then
+main() {
 	echo "Directory: " `pwd`
 
 	echo "Program: $0"
@@ -10,4 +10,8 @@ if [[ "$0" == *scriptedmain* ]]; then
 	for arg in $*; do
 		echo "Arg: $arg"
 	done
+}
+
+if [[ $_ == $0 ]]; then
+	main
 fi
