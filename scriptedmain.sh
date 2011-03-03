@@ -12,6 +12,9 @@ main() {
 	done
 }
 
+# From Dennis Williamson
+# http://stackoverflow.com/questions/2683279/#2687092
+
 if [[ $_ == $0 ]]; then
 	main
 fi

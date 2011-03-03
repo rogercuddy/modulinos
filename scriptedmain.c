@@ -1,3 +1,5 @@
+#include "scriptedmain.h"
+
 #include <stdio.h>
 #include <unistd.h>
 

@@ -1,5 +1,7 @@
 #!/usr/bin/env runhaskell
 
+module ScriptedMain where
+
 import System.Directory (getCurrentDirectory)
 import System (getProgName, getArgs)
 import Control.Monad (mapM_)
