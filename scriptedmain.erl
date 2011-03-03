@@ -1,5 +1,4 @@
 -module(scriptedmain).
--export([main/1]).
 -import(lists, [map/2]).
 
 main(Args) ->
