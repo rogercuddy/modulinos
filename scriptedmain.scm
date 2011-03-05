@@ -21,9 +21,9 @@ exit
 
 (define (program)
 	(if (string=? (car (argv)) "csi")
-		(let ((ss-index (list-index (lambda (x) (string=? "-ss" x)) (argv))))
-			(if (number? ss-index)
-				(cons 'interpreted (list-ref (argv) (+ 1 ss-index)))
+		(let ((s-index (list-index (lambda (x) (string-contains x "-s")) (argv))))
+			(if (number? s-index)
+				(cons 'interpreted (list-ref (argv) (+ 1 s-index)))
 				(cons 'unknown "")))
 		(cons 'compiled (car (argv)))))
 
