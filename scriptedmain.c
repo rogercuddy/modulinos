@@ -1,3 +1,11 @@
+/*
+
+C programs cannot do scripted main, because main() is implicitly included by another program, test.c, even when scriptedmain.h is empty.
+
+The following example will not work with another program, test.c, due to duplicate main() functions at compile time.
+
+*/
+
 #include "scriptedmain.h"
 
 #include <stdio.h>
