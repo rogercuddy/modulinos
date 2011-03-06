@@ -1,16 +1,11 @@
 #!/usr/bin/env newlisp
 
-(context 'SCRIPTED-MAIN)
+(context 'SM)
+
+(define (SM:meaning-of-life) 42)
 
 (define (main)
-	(println "Directory: " (real-path))
-
-	(println "Program: " (main-args 1))
-
-	(println "Number of Args: " (length (main-args)))
-
-	(map (lambda (x) (println "Arg: " x)) (main-args))
-
+	(println (format "Main: The meaning of life is %d" (meaning-of-life)))
 	(exit))
 
 (if (find "scriptedmain" (main-args 1)) (main))
