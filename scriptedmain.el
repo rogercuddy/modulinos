@@ -1,12 +1,9 @@
-:;exec emacs -batch -l $0 -f scripted-main $*
+:;exec emacs -batch -l $0 -f main $*
 
 ;;; Shebang from John Swaby
 ;;; http://www.emacswiki.org/emacs/EmacsScripts
 
-(defun scripted-main ()
- (message "Directory: %s" default-directory)
+(defun meaning-of-life () 42)
 
- (message "Program: %s" (nth 2 command-line-args))
-
- (message "Number of Args: %d" (length command-line-args))
- (mapcar (lambda (x) (message "Arg: %s" x)) command-line-args))
+(defun main ()
+ (message "Main: The meaning of life is %d" (meaning-of-life)))
