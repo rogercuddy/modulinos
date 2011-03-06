@@ -3,4 +3,4 @@
 import ScriptedMain hiding (main)
 
 main :: IO ()
-main = return ()
+main = putStrLn $ "Test: The meaning of life is " ++ show meaningOfLife
