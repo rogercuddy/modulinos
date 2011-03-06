@@ -1,5 +1,11 @@
 #!/usr/bin/env runhaskell
 
+-- Compile:
+--
+-- ghc -o test -main-is Test test.hs scriptedmain.hs
+
+module Test where
+
 import ScriptedMain hiding (main)
 
 main :: IO ()

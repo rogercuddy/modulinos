@@ -1,8 +1,8 @@
 #!/usr/bin/env runhaskell
 
--- Haskell has scripted main, but not for compiled scripts.
--- This is because the primary script must be a module Main,
--- creating a name conflict.
+-- Compile:
+--
+-- ghc -o scriptedmain -main-is ScriptedMain scriptedmain.hs
 
 module ScriptedMain where
 
