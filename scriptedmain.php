@@ -1,14 +1,10 @@
 <?php
+function meaning_of_life() {
+	return 42;
+}
+
 function main($args) {
-	echo "Directory: " . getcwd() . "\n";
-
-	echo "Program: " . $_SERVER["SCRIPT_NAME"] . "\n";
-
-	echo "Number of Args: " . count($args) . "\n";
-
-	foreach($args as $arg) {
-		echo "Arg: $arg\n";
-	}
+	echo "Main: The meaning of life is " . meaning_of_life() . "\n";
 }
 
 if (preg_match("/scriptedmain/", $_SERVER["SCRIPT_NAME"])) {

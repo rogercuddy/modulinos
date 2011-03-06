@@ -1,19 +1,15 @@
 #!/usr/bin/Rscript
 
-getProgram <- function(args) {
-	sub("--file=", "", args[grep("--file=", args)])
+meaningOfLife <- function() {
+	42
 }
 
 main <- function(program, args) {
-	cat("Directory: ", getwd(), "\n")
+	cat("Main: The meaning of life is", meaningOfLife(), "\n")
+}
 
-	cat("Program: ", program, "\n")
-
-	cat("Number of Args: ", length(args), "\n")
-
-	for (arg in args) {
-		cat("Arg: ", arg, "\n")
-	}
+getProgram <- function(args) {
+	sub("--file=", "", args[grep("--file=", args)])
 }
 
 args <- commandArgs(trailingOnly = FALSE)
@@ -21,6 +17,5 @@ program <- getProgram(args)
 
 if (length(program) > 0 && length(grep("scriptedmain", program)) > 0) {
 	main(program, args)
+	q("no")
 }
-
-q("no")

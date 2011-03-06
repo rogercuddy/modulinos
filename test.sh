@@ -1,2 +1,4 @@
 #!/usr/bin/env sh
-sh scriptedmain.sh
+source scriptedmain.sh
+meaning_of_life
+echo "Test: The meaning of life is $?"

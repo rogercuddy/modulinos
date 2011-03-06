@@ -1,13 +1,11 @@
 #!/usr/bin/env ruby
 
+def meaning_of_life
+	42
+end
+
 def main
-	puts "Directory: #{Dir.pwd}"
-
-	puts "Program: #{$0}"
-
-	puts "Number of Args: #{ARGV.length}"
-
-	ARGV.each { |arg| puts "Arg: #{arg}" }
+	puts "Main: The meaning of life is #{meaning_of_life}"
 end
 
 if __FILE__ == $0

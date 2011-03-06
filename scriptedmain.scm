@@ -8,15 +8,10 @@ exit
 (require-extension srfi-1) ; lists
 (require-extension srfi-13) ; strings
 
+(define (meaning-of-life) 42)
+
 (define (main args)
-	(display (format "Directory: ~a\n" (current-directory)))
-
-	(display (format "Program: ~a\n" (cdr (program))))
-
-	(display (format "Number of Args: ~a\n" (length args)))
-
-	(map (lambda (x) (display (format "Arg: ~a\n" x))) args)
-
+	(display (format "Main: The meaning of life is ~a\n" (meaning-of-life)))
 	(exit))
 
 (define (program)

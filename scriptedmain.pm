@@ -1,18 +1,13 @@
 #!/usr/bin/env perl
 
 use strict;
-use Cwd qw(getcwd);
+
+sub meaning_of_life {
+	return 42;
+}
 
 sub main {
-	print "Dirctory: " . getcwd . "\n";
-
-	print "Program: $0\n";
-
-	print "Number of Args: " . ($#ARGV + 1) . "\n";
-
-	foreach my $i (0 .. $#ARGV) {
-		print "Arg: $ARGV[$i]\n";
-	}
+	print "Main: The meaning of life is " . meaning_of_life() . "\n";
 }
 
 unless(caller) { main; }

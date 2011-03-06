@@ -1,3 +1,3 @@
 #!/usr/bin/env octave -qf
 
-scriptedmain();
+printf("Test: The meaning of life is %d\n", meaning_of_life());

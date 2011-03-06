@@ -1,15 +1,10 @@
 #!/usr/bin/env python
 
-import os, sys
+def meaning_of_life():
+	return 42
 
 def main():
-	print "Directory: " + os.getcwd()
+	print "Main: The meaning of life is %s" % meaning_of_life()
 
-	print "Program: " + sys.argv[0]
-
-	print "Number of Args: %d" % len(sys.argv)
-
-	for arg in sys.argv:
-		print "Arg: " + arg
-
-if __name__=="__main__": main()
+if __name__=="__main__":
+	main()

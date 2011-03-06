@@ -1,20 +1,15 @@
 #!/usr/bin/env sh
 
-main() {
-	echo "Directory: " `pwd`
-
-	echo "Program: $0"
-
-	echo "Number of Args: $#"
-
-	for arg in $*; do
-		echo "Arg: $arg"
-	done
+meaning_of_life() {
+	return 42
 }
 
-# From Dennis Williamson
-# http://stackoverflow.com/questions/2683279/#2687092
+main() {
+	meaning_of_life
+	echo "Main: The meaning of life is $?"
+}
 
-if [[ $_ == $0 ]]; then
-	main
+if [[ "$BASH_SOURCE" == "$0" ]]
+then
+    main
 fi
