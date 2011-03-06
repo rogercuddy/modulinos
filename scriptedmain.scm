@@ -6,7 +6,6 @@ exit
 
 (use posix)
 (require-extension srfi-1) ; lists
-(require-extension srfi-13) ; strings
 
 (define (meaning-of-life) 42)
 
