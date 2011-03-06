@@ -1,5 +1,9 @@
 #!/usr/bin/env runhaskell
 
+-- Haskell has scripted main, but not for compiled scripts.
+-- This is because the primary script must be a module Main,
+-- creating a name conflict.
+
 module ScriptedMain where
 
 import System.Directory (getCurrentDirectory)
