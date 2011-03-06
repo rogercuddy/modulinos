@@ -1,8 +1,8 @@
 -module(scriptedmain).
+-export([meaning_of_life/0]).
 -import(lists, [map/2]).
 
-main(Args) ->
-	io:format("Directory: ~s~n", [filename:absname("")]),
-	io:format("Program: ~s~n", [?FILE]),
-	io:format("Number of Args: ~w~n", [length(Args)]),
-	map (fun(Arg) -> io:format("Arg: ~s~n", [Arg]) end, Args).
+meaning_of_life() -> 42.
+
+main(_) ->
+	io:format("Main: The meaning of life is ~w~n", [meaning_of_life()]).

@@ -1,5 +1,7 @@
--module(test).
--export([main/1]).
--import(scriptedmain, []).
+% Compile scriptedmain.erl first.
 
-main(_) -> true.
+-module(test).
+-import(scriptedmain, [meaning_of_life/0]).
+
+main(_) ->
+	io:format("Test: The meaning of life is ~w~n", [meaning_of_life()]).
