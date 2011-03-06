@@ -1,18 +1,11 @@
 #!/usr/bin/env lua
 
-os = require("os")
+function meaningoflife()
+	return 42
+end
 
 function main(arg)
-	print("Directory: " .. os.execute("pwd"))
-
-	print("Program: " .. debug.getinfo(1).source)
-
-	print("Number of Args: " .. #arg)
-
-	for i,a in ipairs(arg) do
-		print("Arg: " .. a)
-	end
-
+	print("Main: The meaning of life is " .. meaningoflife())
 end
 
 if type(package.loaded[(...)]) ~= "userdata" then
