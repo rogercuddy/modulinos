@@ -14,9 +14,9 @@ scriptedmain.s: scriptedmain.ll
 	./$(EXECUTABLE_SM)
 
 clean:
-	rm $(EXECUTABLE_TEST)
-	rm $(EXECUTABLE_SM)
-	rm test.s
-	rm test.bc
-	rm scriptedmain.s
-	rm scriptedmain.bc
+	-rm $(EXECUTABLE_TEST)
+	-rm $(EXECUTABLE_SM)
+	-rm test.s
+	-rm test.bc
+	-rm scriptedmain.s
+	-rm scriptedmain.bc
