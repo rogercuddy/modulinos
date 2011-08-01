@@ -1,3 +1,3 @@
 #!/usr/bin/env lua
-sm = require("scriptedmain")
+local sm = require("scriptedmain")
 print("Test: The meaning of life is " .. sm.meaningoflife())
