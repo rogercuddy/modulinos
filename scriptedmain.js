@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/*jslint nodejs:true */
 
 function meaningOfLife() { return 42; }
 
