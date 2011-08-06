@@ -1,4 +1,4 @@
-":";exec clj -m `basename $0 .clj` ${1+"$@"}
+":";exec clj -m `basename $0 .clj` $0 ${1+"$@"}
 ":";exit
 
 ; Load:
