@@ -1,6 +1,6 @@
 #! /usr/bin/env factor
 
-INCLUDE: scriptedmain
+INCLUDING: scriptedmain ;
 USING: io math.parser ;
 IN: test
 
