@@ -17,4 +17,4 @@ let _ =
 	and re = Str.regexp "test" in
 		try let _ = Str.search_forward re program 0 in
 			main ()
-		with _ -> ()
+		with Not_found -> ()
