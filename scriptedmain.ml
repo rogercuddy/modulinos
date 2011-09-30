@@ -10,7 +10,7 @@ Run:
 
 *)
 
-let meaning_of_life = 42
+let meaning_of_life : int = 42
 
 let main () = print_endline ("Main: The meaning of life is " ^ string_of_int meaning_of_life)
 
