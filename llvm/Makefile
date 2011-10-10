@@ -3,13 +3,13 @@ EXECUTABLE_TEST=test
 
 all: test.ll scriptedmain.s
 	llvm-as test.ll
-	llc test.bc
+	llc -disable-cfi test.bc
 	gcc -o $(EXECUTABLE_TEST) test.s scriptedmain.s
 	./$(EXECUTABLE_TEST)
 
 scriptedmain.s: scriptedmain.ll
 	llvm-as scriptedmain.ll
-	llc scriptedmain.bc
+	llc -disable-cfi scriptedmain.bc
 	gcc -o $(EXECUTABLE_SM) scriptedmain.s
 	./$(EXECUTABLE_SM)
 
