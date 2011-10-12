@@ -1,6 +1,6 @@
 // Compile:
 //
-// gcc -o scriptedmain -lobjc -framework foundation scriptedmain.m scriptedmain.h
+// gcc -o scriptedmain -lobjc -framework foundation scriptedmain.m
 //
 // Run:
 //
@@ -17,7 +17,7 @@
 
 @end
 
-int main(int argc, char **argv) {
+int __attribute__((weak)) main(int argc, char **argv) {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 
 	printf("Main: The meaning of life is %d\n", [ScriptedMain meaningOfLife]);
