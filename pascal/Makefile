@@ -1,10 +1,10 @@
 all: scriptedmain
 
-scriptedmain: scriptedmain.p
-	fpc scriptedmain.p
+scriptedmain: scriptedmain.pas
+	fpc scriptedmain.pas
 
-test: test.p scriptedmain
-	fpc test.p
+test: test.pas scriptedmain
+	fpc test.pas
 
 clean:
 	-rm test

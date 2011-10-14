@@ -9,7 +9,7 @@ unit ScriptedMain;
 	begin
 		MeaningOfLife := 42
 	end;
-begin
+initialization
 	write('Main: The meaning of life is: ');
 	writeln(MeaningOfLife())
 end.
