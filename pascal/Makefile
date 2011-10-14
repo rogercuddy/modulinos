@@ -1,7 +1,7 @@
 all: scriptedmain
 
 scriptedmain: scriptedmain.pas
-	fpc -dstandalone scriptedmain.pas
+	fpc -dscriptedmain scriptedmain.pas
 
 test: test.pas scriptedmain
 	fpc test.pas

@@ -1,4 +1,4 @@
-{$IFDEF standalone}
+{$IFDEF scriptedmain}
 program ScriptedMain;
 {$ELSE}
 unit ScriptedMain;
@@ -10,7 +10,7 @@ implementation
 	begin
 		MeaningOfLife := 42
 	end;
-{$IFDEF standalone}
+{$IFDEF scriptedmain}
 begin
 	write('Main: The meaning of life is: ');
 	writeln(MeaningOfLife())
