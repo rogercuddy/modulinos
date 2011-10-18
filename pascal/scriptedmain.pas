@@ -6,10 +6,10 @@ interface
 function MeaningOfLife () : integer;
 implementation
 {$ENDIF}
-	function MeaningOfLife () : integer;
-	begin
-		MeaningOfLife := 42
-	end;
+function MeaningOfLife () : integer;
+begin
+	MeaningOfLife := 42
+end;
 {$IFDEF scriptedmain}
 begin
 	write('Main: The meaning of life is: ');
