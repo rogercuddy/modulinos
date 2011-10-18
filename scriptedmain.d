@@ -1,5 +1,14 @@
 #!/usr/bin/env rdmd -version=scriptedmain
 
+// Interpret:
+// ./scriptedmain.d
+//
+// Compile:
+// dmd scriptedmain.d -version=scriptedmain
+//
+// Run:
+// ./scriptedmain
+
 module scriptedmain;
 
 import std.stdio;
