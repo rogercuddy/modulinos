@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 #|
 exec csi -ss $0 ${1+"$@"}
 exit
