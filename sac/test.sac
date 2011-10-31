@@ -1,0 +1,8 @@
+use StdIO: all;
+use Array: all;
+
+int main() {
+	/* ... */
+
+	return(0);
+}
