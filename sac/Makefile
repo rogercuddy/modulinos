@@ -1,13 +1,17 @@
 all: scriptedmain
 
-scriptedmain: scriptedmain.sac
-	sac2c -o scriptedmain scriptedmain.sac
+scriptedmain: ScriptedMain.sac
+	sac2c -o scriptedmain ScriptedMain.sac -Dscriptedmain
 
-test: test.sac scriptedmain.sac
-	sac2c -o test test.sac scriptedmain.sac
+test: test.sac ScriptedMain.sac
+	sac2c ScriptedMain.sac
+	sac2c -o test test.sac
 
 clean:
 	-rm test
 	-rm test.c
+	-rm libScriptedMainTree.so
+	-rm libScriptedMainMod.so
+	-rm libScriptedMainMod.a
 	-rm scriptedmain
 	-rm scriptedmain.c

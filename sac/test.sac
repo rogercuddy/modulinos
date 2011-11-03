@@ -1,8 +1,8 @@
 use StdIO: all;
 use Array: all;
+use ScriptedMain: all;
 
 int main() {
-	/* ... */
-
+	printf("Test: The meaning of life is %d\n", meaning_of_life());
 	return(0);
 }
