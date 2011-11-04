@@ -10,7 +10,7 @@ main =: monad : 0
 )
 
 program =: monad : 0
-	if. (#;.1 ARGV) > 0 do.
+	if. (#;.1 ARGV) > 1 do.
 		> 1 { ARGV
 	else.
 		'Interpreted'
