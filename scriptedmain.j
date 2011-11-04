@@ -9,8 +9,16 @@ main =: monad : 0
 	exit ''
 )
 
+program =: monad : 0
+	if. (#;.1 ARGV) > 0 do.
+		> 1 { ARGV
+	else.
+		'Interpreted'
+	end.
+)
+
 shouldrun =: monad : 0
-	if. '.*scriptedmain.*' rxeq > 1 { ARGV do.
+	if. '.*scriptedmain.*' rxeq program 0 do.
 		main 0
 	end.
 )
