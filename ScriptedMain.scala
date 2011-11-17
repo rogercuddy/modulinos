@@ -1,3 +1,6 @@
+// Run:
+// scala ScriptedMain.scala
+
 object ScriptedMain {
 	val meaningOfLife = 42
 
