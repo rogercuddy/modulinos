@@ -2,7 +2,7 @@
 // scalac ScriptedMain.scala
 // scalac -classpath . Test.scala
 //
-// Run (requires '.' in CLASSPATH):
+// Run (either CLASSPATH must contain the current directory (.), or the CLASSPATH must be unset):
 // scala Test
 
 object Test {
