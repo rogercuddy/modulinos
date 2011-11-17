@@ -2,7 +2,7 @@
 // scalac ScriptedMain.scala
 // scalac -classpath . Test.scala
 //
-// Run:
+// Run (requires '.' in CLASSPATH):
 // scala Test
 
 object Test {
