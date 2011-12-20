@@ -1,6 +1,6 @@
-scriptedmain - Programs that only run main() if they're not loaded as libraries by other programs.
+# scriptedmain - Programs that only run main() if they're not loaded as libraries by other programs.
 
-EXAMPLE
+## EXAMPLE
 
 	$ ./scriptedmain.py
 	Main: The meaning of life is 42
