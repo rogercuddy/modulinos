@@ -1,12 +1,3 @@
-// Compile:
-//
-// rustc --lib scriptedmain.rs
-// rustc test.rs -L .
-//
-// Run:
-//
-// ./test
-
 use scriptedmain;
 use std;
 

@@ -1,11 +1,3 @@
-// Compile:
-//
-// rustc scriptedmain.rs
-//
-// Run:
-//
-// ./scriptedmain
-
 #[link(name = "scriptedmain")];
 
 use std;
