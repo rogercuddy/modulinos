@@ -10,7 +10,6 @@ int meaning_of_life() {
 
 int main() {
 	cout << "Main: The meaning of life is " << meaning_of_life() << endl;
-
 	return 0;
 }
 
