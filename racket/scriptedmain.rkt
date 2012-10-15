@@ -5,4 +5,4 @@
 
 (define (meaning-of-life) 42)
 
-(module+ main (printf "Main: The meaning of life is ~s\n" (meaning-of-life)))
+(module+ main (printf "Main: The meaning of life is ~a\n" (meaning-of-life)))

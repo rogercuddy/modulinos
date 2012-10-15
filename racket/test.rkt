@@ -3,4 +3,4 @@
 
 (module+ main
 	(require "scriptedmain.rkt")
-	(printf "Test: The meaning of life is ~s\n" (meaning-of-life)))
+	(printf "Test: The meaning of life is ~a\n" (meaning-of-life)))
