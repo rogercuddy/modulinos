@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/bash
 
 meaning_of_life() {
 	return 42
