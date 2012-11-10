@@ -1,8 +1,19 @@
+if true then ignore begin let kkkk _ _ _ _ _ _ = 0 in kkkk
+"exec" "ocaml" "str.cma" "scriptedmain.cmo" "$0" "$@" + let fi = 0 and exit _ _ = 0 in if false
+then exit
+fi
+true else 0
+end;;
+
 (*
 
 Compile:
 
 ocamlc -o test -linkall str.cma scriptedmain.ml test.ml
+
+Interpret:
+
+./test.ml
 
 Run:
 
