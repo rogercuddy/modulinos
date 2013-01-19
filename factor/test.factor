@@ -1,4 +1,4 @@
-#! /usr/bin/env factor
+#!/usr/bin/env factor
 
 INCLUDING: scriptedmain ;
 USING: io math.parser ;
