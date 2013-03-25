@@ -2,7 +2,7 @@ all: run
 
 run: scriptedmain test
 	./scriptedmain
-	./text
+	./test
 
 scriptedmain: scriptedmain.oz
 	ozc -x scriptedmain.oz
