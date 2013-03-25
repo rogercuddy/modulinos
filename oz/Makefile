@@ -11,9 +11,10 @@ scriptedmain.ozf: scriptedmain.oz
 	ozc -c scriptedmain.oz
 
 test: scriptedmain.ozf test.oz
-	ozc -x scriptedmain.oz
+	ozc -x test.oz
 
 clean:
 	-rm test
 	-rm scriptedmain
+	-rm *.ozf
 	-rm *.exe
