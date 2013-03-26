@@ -1,4 +1,4 @@
-":";exec lein exec $0
+":";exec lein exec $0 ${1+"$@"}
 ":";exit
 
 (ns test
@@ -10,4 +10,4 @@
   (println "Test: The meaning of life is" (scriptedmain/meaning-of-life)))
 
 (when (.contains (first *command-line-args*) *source-path*)
-  (-main (rest *command-line-args*)))
+  (apply -main (rest *command-line-args*)))
