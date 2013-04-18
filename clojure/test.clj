@@ -1,10 +1,13 @@
-":";exec clj -m `basename $0 .clj` $0 ${1+"$@"}
+":";exec lein exec $0 ${1+"$@"}
 ":";exit
 
 (ns test
-	(:gen-class))
+  (:gen-class))
 
-(load "scriptedmain")
+(load-string (slurp "scriptedmain.clj"))
 
 (defn -main [& args]
-	(println "Test: The meaning of life is" (scriptedmain/meaning-of-life)))
+  (println "Test: The meaning of life is" (scriptedmain/meaning-of-life)))
+
+(when (.contains (first *command-line-args*) *source-path*)
+  (apply -main (rest *command-line-args*)))
