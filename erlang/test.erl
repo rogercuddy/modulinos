@@ -1,6 +1,9 @@
 % Compile scriptedmain.erl first.
 
 -module(test).
+-export([start/0]).
 -import(scriptedmain, [meaning_of_life/0]).
 
-main(_) -> io:format("Test: The meaning of life is ~w~n", [meaning_of_life()]).
+start() ->
+  io:format("Test: The meaning of life is ~w~n", [meaning_of_life()]),
+  init:stop().
