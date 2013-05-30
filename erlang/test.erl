@@ -1,5 +1,3 @@
-% Compile scriptedmain.erl first.
-
 -module(test).
 -export([start/0]).
 -import(scriptedmain, [meaning_of_life/0]).
