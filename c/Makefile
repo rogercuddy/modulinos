@@ -8,6 +8,9 @@ scriptedmain: scriptedmain.c scriptedmain.h
 test: test.c scriptedmain.h scriptedmain.c
 	gcc -o test test.c scriptedmain.c scriptedmain.h
 
+lint:
+	splint *.c *.h
+
 clean:
 	-rm scriptedmain
 	-rm test
