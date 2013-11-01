@@ -3,10 +3,10 @@ all: scriptedmain test
 	./test
 
 scriptedmain: scriptedmain.cpp scriptedmain.h
-	g++ -o scriptedmain -static-libgcc -static-libstdc++ -DSCRIPTEDMAIN scriptedmain.cpp scriptedmain.h
+	g++ -o scriptedmain -DSCRIPTEDMAIN scriptedmain.cpp
 
 test: test.cpp scriptedmain.h scriptedmain.cpp
-	g++ -o test -static-libgcc -static-libstdc++ test.cpp scriptedmain.cpp scriptedmain.h
+	g++ -o test test.cpp scriptedmain.cpp
 
 lint:
 	cppcheck *.cpp *.h
