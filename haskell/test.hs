@@ -2,7 +2,7 @@
 
 -- Compile:
 --
--- ghc -fforce-recomp -o test -main-is Test test.hs scriptedmain.hs
+-- ghc -fforce-recomp -o test -main-is Test test.hs scriptedmain.hs -Wall
 
 module Test where
 
