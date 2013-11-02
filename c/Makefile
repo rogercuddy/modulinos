@@ -9,7 +9,7 @@ test: test.c scriptedmain.h scriptedmain.c
 	gcc -o test test.c scriptedmain.c -Wall
 
 lint:
-	splint +warning-stream-stdout *.c *.h
+	splint *.c *.h
 
 clean:
 	-rm scriptedmain
