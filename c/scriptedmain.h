@@ -1,1 +1,1 @@
-int meaning_of_life();
+extern int meaning_of_life();
