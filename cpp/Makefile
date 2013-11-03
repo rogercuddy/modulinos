@@ -12,7 +12,6 @@ lint:
 	cppcheck *.cpp *.h
 
 clean:
+	-rm *.exe
 	-rm scriptedmain
 	-rm test
-	-rm scriptedmain.exe
-	-rm test.exe
