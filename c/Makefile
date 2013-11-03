@@ -3,10 +3,10 @@ all: scriptedmain test
 	./test
 
 scriptedmain: scriptedmain.c scriptedmain.h
-	gcc -O2 -Wall -o scriptedmain -DSCRIPTEDMAIN scriptedmain.c
+	gcc -O2 -Wall -Wextra -o scriptedmain -DSCRIPTEDMAIN scriptedmain.c
 
 test: test.c scriptedmain.h scriptedmain.c
-	gcc -O2 -Wall -o test test.c scriptedmain.c
+	gcc -O2 -Wall -Wextra -o test test.c scriptedmain.c
 
 lint:
 	splint *.c *.h
