@@ -1,9 +1,5 @@
 #!/usr/bin/env runhaskell
 
--- Compile:
---
--- ghc -fforce-recomp -o scriptedmain -main-is ScriptedMain scriptedmain.hs -Wall
-
 module ScriptedMain where
 
 meaningOfLife :: Int

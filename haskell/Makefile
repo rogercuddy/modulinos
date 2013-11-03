@@ -3,10 +3,10 @@ all: scriptedmain test
 	./test
 
 scriptedmain: scriptedmain.hs
-	ghc -fforce-recomp -o scriptedmain -main-is ScriptedMain scriptedmain.hs -Wall
+	ghc -O2 -Wall -fforce-recomp -o scriptedmain -main-is ScriptedMain scriptedmain.hs
 
 test: test.hs
-	ghc -fforce-recomp -o test -main-is Test test.hs scriptedmain.hs -Wall
+	ghc -O2 -Wall -fforce-recomp -o test -main-is Test test.hs scriptedmain.hs
 
 clean:
 	-rm *.exe
