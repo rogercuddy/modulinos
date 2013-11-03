@@ -1,6 +1,4 @@
-all: t
-
-t: scriptedmain.beam test.beam
+all: scriptedmain.beam test.beam
 	erl -noshell -s scriptedmain
 	erl -noshell -s test
 
