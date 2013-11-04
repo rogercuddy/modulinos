@@ -1,12 +1,18 @@
+FLAGS=-Wall -Wextra -Wmost -framework Foundation -lobjc
+
 all: scriptedmain test
 	./scriptedmain
 	./test
 
 scriptedmain: ScriptedMain.m ScriptedMain.h
-	clang -Wall -Wextra -Wmost -framework Foundation -lobjc -o scriptedmain ScriptedMain.m
+	clang $(FLAGS) -o scriptedmain ScriptedMain.m
 
 test: Test.m ScriptedMain.m ScriptedMain.h
-	clang -Wall -Wextra -Wmost -framework Foundation -lobjc -o Test Test.m ScriptedMain.m
+	clang $(FLAGS) -o test Test.m ScriptedMain.m
+
+lint:
+	oclint ScriptedMain.m -- $(FLAGS) -o scriptedmain
+	oclint Test.m -- $(FLAGS) -o test
 
 clean:
 	-rm *.exe
