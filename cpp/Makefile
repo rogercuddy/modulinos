@@ -9,7 +9,7 @@ test: test.cpp scriptedmain.h scriptedmain.cpp
 	g++ -O2 -Wall -Wextra -o test test.cpp scriptedmain.cpp
 
 lint:
-	cppcheck .
+	cppcheck --enable=all --suppress=missingIncludeSystem .
 
 clean:
 	-rm *.exe
