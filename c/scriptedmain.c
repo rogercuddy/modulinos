@@ -1,6 +1,7 @@
 #include <stdio.h>
+#include "scriptedmain.h"
 
-int meaning_of_life() {
+int meaning_of_life(void) {
   return 42;
 }
 
