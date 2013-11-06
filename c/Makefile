@@ -12,7 +12,7 @@ test: test.c scriptedmain.h scriptedmain.c
 	$(CC) $(FLAGS) -o test test.c scriptedmain.c
 
 lint:
-	splint *.c *.h -preproc
+	splint *.c *.h
 
 clean:
 	-rm *.exe
