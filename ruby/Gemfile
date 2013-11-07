@@ -1,4 +1,5 @@
 source "http://rubygems.org"
+gem "contracts"
 
 group :development do
   gem "guard"
@@ -8,5 +9,7 @@ group :development do
   gem "flay"
   gem "flog"
   gem "roodi"
+  gem "churn"
   gem "cane"
+  gem "excellent"
 end
