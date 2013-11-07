@@ -1,4 +1,5 @@
 source "http://rubygems.org"
+
 group :development do
   gem "guard"
   gem "guard-shell"
@@ -7,4 +8,5 @@ group :development do
   gem "flay"
   gem "flog"
   gem "roodi"
+  gem "cane"
 end
