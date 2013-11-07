@@ -1,4 +1,6 @@
-scriptedmain
-test
 *.exe
 *.o
+Gemfile.lock
+tmp/
+scriptedmain
+test
