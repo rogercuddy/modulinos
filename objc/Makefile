@@ -1,4 +1,4 @@
-FLAGS=-Wall -Wextra -Wmost -framework Foundation -lobjc
+FLAGS=-Wall -Wextra -Wmost -Weverything -framework Foundation -lobjc
 
 all: scriptedmain test
 	./scriptedmain
