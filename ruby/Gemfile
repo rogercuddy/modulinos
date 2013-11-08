@@ -13,4 +13,5 @@ group :development do
   gem "cane"
   gem "excellent"
   gem "rubocop"
+  gem "tailor"
 end
