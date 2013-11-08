@@ -1,3 +1,8 @@
+task :test => [] do
+  sh "ruby scriptedmain.rb"
+  sh "ruby test.rb"
+end
+
 task :reek => [] do
   sh "bundle exec reek -q .; true"
 end
@@ -18,5 +23,9 @@ task :excellent => [] do
   sh "bundle exec excellent ."
 end
 
-task :lint => [:reek, :flay, :roodi, :cane, :excellent] do
+task :rubocop => [] do
+  sh "bundle exec rubocop"
+end
+
+task :lint => [:reek, :flay, :roodi, :cane, :excellent, :rubocop] do
 end
