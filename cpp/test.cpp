@@ -1,7 +1,7 @@
 #include <iostream>
 #include "./scriptedmain.h"
-
-using namespace std;
+using std::cout;
+using std::endl;
 
 extern int meaning_of_life();
 
