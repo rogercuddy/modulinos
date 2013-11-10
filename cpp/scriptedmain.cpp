@@ -1,5 +1,5 @@
 #include <iostream>
-#include "scriptedmain.h"
+#include "./scriptedmain.h"
 
 using namespace std;
 

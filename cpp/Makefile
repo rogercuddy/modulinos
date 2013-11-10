@@ -11,8 +11,13 @@ scriptedmain: scriptedmain.cpp scriptedmain.h
 test: test.cpp scriptedmain.h scriptedmain.cpp
 	$(CC) $(FLAGS) -o test test.cpp scriptedmain.cpp
 
-lint:
+cppcheck:
 	cppcheck --enable=all --suppress=missingIncludeSystem .
+
+cpplint:
+	cpplint --filter=-build/header_guard,-whitespace/parens,-readability/braces,-whitespace/newline,-legal/copyright *.cpp *.h
+
+lint: cppcheck
 
 clean:
 	-rm *.exe
