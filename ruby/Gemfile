@@ -14,4 +14,5 @@ group :development do
   gem 'excellent'
   gem 'rubocop'
   gem 'tailor'
+  gem 'cucumber'
 end
