@@ -1,6 +1,6 @@
 #!/bin/bash
 
-path=$(dirname -- "$0")
+path="${0%/*}"
 source "$path/scriptedmain"
 
 meaning_of_life
