@@ -18,7 +18,7 @@ int meaningOfLife() {
 }
 
 version (scriptedmain) {
-	void main(immutable string[] args) {
+	void main(const string[] args) {
 		writeln("Main: The meaning of life is ", meaningOfLife());
 	}
 }
