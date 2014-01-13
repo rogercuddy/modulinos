@@ -6,7 +6,7 @@
 // scala Test
 
 object Test {
-	def main(args: Array[String]) {
-		println("Test: The meaning of life is " + ScriptedMain.meaningOfLife)
-	}
+  def main(args: Array[String]) {
+    println("Test: The meaning of life is " + ScriptedMain.meaningOfLife)
+  }
 }
