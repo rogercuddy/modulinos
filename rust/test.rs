@@ -1,6 +1,9 @@
-use scriptedmain;
-use std;
+extern mod scriptedmain;
+extern mod std;
+
+use scriptedmain::meaning_of_life;
+use std::io::println;
 
 fn main() {
-	std::io::println("Test: The meaning of life is " + core::int::to_str(scriptedmain::meaning_of_life(), 10u));
+	println("Test: The meaning of life is " + meaning_of_life().to_str());
 }

@@ -1,4 +1,6 @@
-all: scriptedmain
+all: scriptedmain test
+	./scriptedmain
+	./test
 
 scriptedmain: scriptedmain.rs
 	rustc scriptedmain.rs

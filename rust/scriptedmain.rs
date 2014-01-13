@@ -1,11 +1,13 @@
 #[link(name = "scriptedmain")];
 
-use std;
+extern mod std;
 
-fn meaning_of_life() -> int {
-	ret 42;
+use std::io::println;
+
+pub fn meaning_of_life() -> int {
+	return 42;
 }
 
 fn main() {
-	std::io::println("Main: The meaning of life is " + core::int::to_str(meaning_of_life(), 10u));
+	println("Main: The meaning of life is " + meaning_of_life().to_str());
 }
