@@ -10,7 +10,8 @@ test: test.rs scriptedmain.rs
 	rustc test.rs -L .
 
 clean:
+	-rm *.exe
 	-rm test
-	-rm -rf *.dylib
 	-rm scriptedmain
+	-rm -rf *.dylib
 	-rm -rf *.dSYM
