@@ -3,7 +3,7 @@
 class ScriptedMain {
 	static def meaningOfLife = 42
 
-	static main(args) {
+	static main(final args) {
 		println "Main: The meaning of life is " + meaningOfLife
 	}
 }
