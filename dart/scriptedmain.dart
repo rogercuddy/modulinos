@@ -3,9 +3,9 @@
 #library("scriptedmain");
 
 meaningOfLife() {
-	return 42;
+  return 42;
 }
 
 main() {
-	print("Main: The meaning of life is ${meaningOfLife()}");
+  print("Main: The meaning of life is ${meaningOfLife()}");
 }

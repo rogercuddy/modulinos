@@ -3,5 +3,5 @@
 #import("scriptedmain.dart", prefix: "scriptedmain");
 
 main() {
-	print("Test: The meaning of life is ${scriptedmain.meaningOfLife()}");
+  print("Test: The meaning of life is ${scriptedmain.meaningOfLife()}");
 }
