@@ -1,3 +1,5 @@
+// Copyright (C) YelloSoft
+
 #include <iostream>
 #include "./scriptedmain.h"
 using std::cout;

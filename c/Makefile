@@ -11,8 +11,16 @@ scriptedmain: scriptedmain.c scriptedmain.h
 test: test.c scriptedmain.h scriptedmain.c
 	$(CC) $(FLAGS) -o test test.c scriptedmain.c
 
-lint:
-	splint *.c *.h
+splint:
+	find . -type f -name '*.c' -exec splint {} \;
+	find . -type f -name '*.h' -exec splint {} \;
+
+vera++:
+	find . -type f -name '*.cpp' -exec vera++ -s {} \;
+	find . -type f -name '*.c' -exec vera++ -s {} \;
+	find . -type f -name '*.h' -exec vera++ -s {} \;
+
+lint: splint vera++
 
 clean:
 	-rm *.exe

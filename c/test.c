@@ -1,3 +1,5 @@
+// Copyright (C) YelloSoft
+
 #include "scriptedmain.h"
 #include <stdio.h>
 
