@@ -22,6 +22,10 @@ vera++:
 
 lint: splint vera++
 
+valgrind: scriptedmain test
+	valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --track-fds=yes --dsymutil=yes ./scriptedmain
+	valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --track-fds=yes --dsymutil=yes ./test
+
 clean:
 	-rm *.exe
 	-rm scriptedmain
