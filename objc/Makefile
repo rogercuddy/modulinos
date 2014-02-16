@@ -14,6 +14,10 @@ lint:
 	oclint ScriptedMain.m -- $(FLAGS) -o scriptedmain
 	oclint Test.m -- $(FLAGS) -o test
 
+valgrind: $(BIN)
+	valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --track-fds=yes --dsymutil=yes ./scriptedmain
+	valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --track-fds=yes --dsymutil=yes ./test
+
 clean:
 	-rm *.exe
 	-rm scriptedmain
