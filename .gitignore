@@ -1,6 +1,7 @@
 *.exe
 *.o
 *.dSYM/
+*.class
 Gemfile.lock
 tmp/
 scriptedmain
