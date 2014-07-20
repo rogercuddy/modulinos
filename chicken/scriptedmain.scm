@@ -1,8 +1,4 @@
-#!/bin/sh
-#|
-exec csi -ss $0 ${1+"$@"}
-exit
-|#
+#!/usr/bin/env csi -ss
 
 (use posix)
 (require-extension srfi-1) ; lists
