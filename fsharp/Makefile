@@ -1,4 +1,8 @@
-all: scriptedmain.exe test.exe
+all: test
+
+test: scriptedmain.exe test.exe
+	mono scriptedmain.exe
+	mono test.exe
 
 scriptedmain.exe: ScriptedMain.fs
 	fsharpc --nologo --out:scriptedmain.exe ScriptedMain.fs
