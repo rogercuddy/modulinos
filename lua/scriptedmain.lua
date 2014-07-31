@@ -1,15 +1,18 @@
 #!/usr/bin/env lua
 
-function meaningoflife()
-	return 42
-end
+ScriptedMain = {}
 
-function main(arg)
-	print("Main: The meaning of life is " .. meaningoflife())
+local meaningOfLife
+meaningOfLife = function() return 42 end
+ScriptedMain.meaningOfLife = meaningOfLife
+
+local main
+main = function(arg)
+  print("Main: The meaning of life is " .. meaningOfLife())
 end
 
 if type(package.loaded[(...)]) ~= "userdata" then
-	main(arg)
+  main(arg)
 else
-	module(..., package.seeall)
+  module(..., package.seeall)
 end
