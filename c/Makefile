@@ -11,13 +11,16 @@ scriptedmain: scriptedmain.c scriptedmain.h
 test: test.c scriptedmain.h scriptedmain.c
 	$(CC) $(FLAGS) -o test test.c scriptedmain.c
 
+cppcheck:
+	cppcheck --enable=all --suppressions $$HOME/suppressions.cfg .
+
 splint:
 	find . -type f -name '*.[ch]' -exec splint {} \;
 
 vera++:
 	find . -type f -name '*.cpp' -o -name '*.[ch]' -exec vera++ -s {} \;
 
-lint: splint vera++
+lint: cppcheck splint vera++
 
 valgrind: scriptedmain test
 	valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --track-fds=yes --dsymutil=yes ./scriptedmain
