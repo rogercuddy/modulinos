@@ -12,7 +12,7 @@ test: test.cpp scriptedmain.h scriptedmain.cpp
 	$(CC) $(FLAGS) -o test test.cpp scriptedmain.cpp
 
 cppcheck:
-	cppcheck --enable=all --suppress=missingIncludeSystem .
+	cppcheck --quiet --enable=all --suppressions $$HOME/suppressions.cfg .
 
 cpplint:
 	find . -type f -name '*.cpp' -o -name '*.[ch]' -exec cpplint --filter=-readability/streams,-build/header_guard,-whitespace/parens,-readability/braces,-whitespace/newline,-legal/copyright {} \;
