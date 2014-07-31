@@ -12,7 +12,7 @@ test: test.c scriptedmain.h scriptedmain.c
 	$(CC) $(FLAGS) -o test test.c scriptedmain.c
 
 cppcheck:
-	cppcheck --enable=all --suppressions $$HOME/suppressions.cfg .
+	cppcheck --quiet --enable=all --suppressions $$HOME/suppressions.cfg .
 
 splint:
 	find . -type f -name '*.[ch]' -exec splint {} \;
