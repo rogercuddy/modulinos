@@ -1,0 +1,9 @@
+#!/bin/tcsh
+
+set MEANING_OF_LIFE=42
+
+alias main "echo 'Main: The meaning of life is $MEANING_OF_LIFE'"
+
+if( "$0" == */scriptedmain ) then
+  main
+endif
