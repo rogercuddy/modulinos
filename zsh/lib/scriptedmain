@@ -1,0 +1,12 @@
+#!/bin/zsh
+
+meaning_of_life() {
+  return 42
+}
+
+main() {
+  meaning_of_life
+  echo "Main: The meaning of life is $?"
+}
+
+# No known method of modulinos in zsh

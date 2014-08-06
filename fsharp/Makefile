@@ -1,14 +1,17 @@
-all: test
+SCRIPTED_MAIN=bin/scriptedmain.exe
+TEST=bin/test.exe
 
-test: scriptedmain.exe test.exe
-	mono scriptedmain.exe
-	mono test.exe
+all: $(SCRIPTED_MAIN) $(TEST)
+	mono $(SCRIPTED_MAIN)
+	mono $(TEST)
 
-scriptedmain.exe: ScriptedMain.fs
-	fsharpc --nologo --out:scriptedmain.exe ScriptedMain.fs
+$(SCRIPTED_MAIN): ScriptedMain.fs
+	mkdir -p bin/
+	fsharpc --nologo --out:$(SCRIPTED_MAIN) ScriptedMain.fs
 
-test.exe: Test.fs ScriptedMain.fs
-	fsharpc --nologo --out:test.exe ScriptedMain.fs Test.fs
+$(TEST): Test.fs ScriptedMain.fs
+	mkdir -p bin/
+	fsharpc --nologo --out:$(TEST) ScriptedMain.fs Test.fs
 
 clean:
-	-rm *.exe
+	-rm -rf bin/

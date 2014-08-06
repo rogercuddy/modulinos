@@ -11,25 +11,28 @@ ifneq ($(OS),Windows_NT)
 	endif
 endif
 
-all: scriptedmain test
-	./scriptedmain
-	./test
+SCRIPTED_MAIN=bin/scriptedmain
+TEST=bin/test
 
-scriptedmain: ScriptedMain.m ScriptedMain.h
-	clang $(FLAGS) $(LINUX_FLAGS) -o scriptedmain ScriptedMain.m
+all: $(SCRIPTED_MAIN) $(TEST)
+	$(SCRIPTED_MAIN)
+	$(TEST)
 
-test: Test.m ScriptedMain.m ScriptedMain.h
-	clang $(FLAGS) $(LINUX_FLAGS) -o test Test.m ScriptedMain.m
+$(SCRIPTED_MAIN): ScriptedMain.m ScriptedMain.h
+	mkdir -p bin/
+	clang $(FLAGS) $(LINUX_FLAGS) -o $(SCRIPTED_MAIN) ScriptedMain.m
+
+$(TEST): Test.m ScriptedMain.m ScriptedMain.h
+	mkdir -p bin/
+	clang $(FLAGS) $(LINUX_FLAGS) -o $(TEST) Test.m ScriptedMain.m
 
 lint:
-	oclint ScriptedMain.m -- $(FLAGS) -o scriptedmain
-	oclint Test.m -- $(FLAGS) -o test
+	oclint ScriptedMain.m -- $(FLAGS) -o $(SCRIPTED_MAIN)
+	oclint Test.m -- $(FLAGS) -o $(TEST)
 
 valgrind: $(BIN)
 	valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --track-fds=yes --dsymutil=yes ./scriptedmain
 	valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --track-fds=yes --dsymutil=yes ./test
 
 clean:
-	-rm *.exe
-	-rm scriptedmain
-	-rm test
+	-rm -rf bin/

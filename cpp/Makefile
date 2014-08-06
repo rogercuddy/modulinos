@@ -1,15 +1,20 @@
 CC=clang++
 FLAGS=-O2 -Wall -Wextra -Weffc++ -Wmost -Weverything
 
-all: scriptedmain test
-	./scriptedmain
-	./test
+SCRIPTED_MAIN=bin/scriptedmain
+TEST=bin/test
 
-scriptedmain: scriptedmain.cpp scriptedmain.h
-	$(CC) $(FLAGS) -o scriptedmain -DSCRIPTEDMAIN scriptedmain.cpp
+all: $(SCRIPTED_MAIN) $(TEST)
+	$(SCRIPTED_MAIN)
+	$(TEST)
 
-test: test.cpp scriptedmain.h scriptedmain.cpp
-	$(CC) $(FLAGS) -o test test.cpp scriptedmain.cpp
+$(SCRIPTED_MAIN): scriptedmain.cpp scriptedmain.h
+	mkdir -p bin/
+	$(CC) $(FLAGS) -o $(SCRIPTED_MAIN) -DSCRIPTEDMAIN scriptedmain.cpp
+
+$(TEST): test.cpp scriptedmain.h scriptedmain.cpp
+	mkdir -p bin/
+	$(CC) $(FLAGS) -o $(TEST) test.cpp scriptedmain.cpp
 
 cppcheck:
 	cppcheck --quiet --enable=all --suppressions $$HOME/suppressions.cfg .
@@ -30,6 +35,4 @@ valgrind: scriptedmain test
 	valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --track-fds=yes --dsymutil=yes ./test
 
 clean:
-	-rm *.exe
-	-rm scriptedmain
-	-rm test
+	-rm -rf bin/

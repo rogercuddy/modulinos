@@ -1,8 +1,6 @@
-*.exe
+bin/
 *.o
 *.dSYM/
 *.class
 Gemfile.lock
 tmp/
-scriptedmain
-test

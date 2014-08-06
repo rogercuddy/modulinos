@@ -1,17 +1,20 @@
 FLAGS=-w -wi
 
-all: scriptedmain test
-	./scriptedmain
-	./test
+SCRIPTED_MAIN=bin/scriptedmain
+TEST=bin/text
 
-scriptedmain: scriptedmain.d
-	dmd $(FLAGS) scriptedmain.d -version=scriptedmain
+all: $(SCRIPTED_MAIN) $(TEST)
+	$(SCRIPTED_MAIN)
+	$(TEST)
 
-test: test.d
-	dmd $(FLAGS) test.d scriptedmain.d -version=test
+$(SCRIPTED_MAIN): scriptedmain.d
+	mkdir -p bin/
+	dmd $(FLAGS) -of$(SCRIPTED_MAIN) scriptedmain.d -version=scriptedmain
+
+$(TEST): test.d scriptedmain.d
+	mkdir -p bin/
+	dmd $(FLAGS) -of$(TEST) test.d scriptedmain.d -version=test
 
 clean:
-	-rm *.exe
-	-rm test
-	-rm scriptedmain
+	-rm -rf bin/
 	-rm *.o
