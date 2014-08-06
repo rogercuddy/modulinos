@@ -1,0 +1,12 @@
+#!/bin/csh
+
+set sourced=($_)
+
+set path=`dirname -- $0`
+source "$path/scriptedmain"
+
+alias main "echo 'Test: The meaning of life is $MEANING_OF_LIFE'"
+
+if( "$0" == */test ) then
+  main
+endif
