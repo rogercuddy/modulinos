@@ -3,5 +3,11 @@
 path="${0%/*}"
 source "$path/scriptedmain"
 
-meaning_of_life
-echo "Test: The meaning of life is $?"
+function main() {
+  meaning_of_life
+  echo "Test: The meaning of life is $?"
+}
+
+if [[ $zsh_eval_context[-1] == toplevel ]]; then
+  main
+fi

@@ -9,4 +9,6 @@ main() {
   echo "Main: The meaning of life is $?"
 }
 
-# No known method of modulinos in zsh
+if [[ $zsh_eval_context[-1] == toplevel ]]; then
+  main
+fi
