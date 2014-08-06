@@ -1,0 +1,13 @@
+#!/usr/bin/env dash
+
+path="${0%/*}"
+. "$path/scriptedmain"
+
+main() {
+  meaning_of_life
+  echo "Test: The meaning of life is $?"
+}
+
+if [ "$0" = */test ]; then
+    main
+fi
