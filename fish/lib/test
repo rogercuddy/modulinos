@@ -1,0 +1,12 @@
+#!/usr/bin/env fish
+
+set path (dirname "$_")
+source "$path/scriptedmain"
+
+function main
+  echo "Test: The meaning of life is $MEANING_OF_LIFE"
+end
+
+if [ "$_" = */test ]
+    main
+end

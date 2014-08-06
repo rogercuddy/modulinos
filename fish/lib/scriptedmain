@@ -1,0 +1,11 @@
+#!/usr/bin/env fish
+
+set -x MEANING_OF_LIFE 42
+
+function main
+  echo "Main: The meaning of life is $MEANING_OF_LIFE"
+end
+
+if [ "$_" = */scriptedmain ]
+    main
+end
