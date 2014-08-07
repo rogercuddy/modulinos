@@ -1,0 +1,16 @@
+#!/usr/bin/env ash
+
+meaning_of_life() {
+  return 42
+}
+
+main() {
+  meaning_of_life
+  echo "Main: The meaning of life is $?"
+}
+
+
+
+if [ "$0" = */scriptedmain ]; then
+    main
+fi
