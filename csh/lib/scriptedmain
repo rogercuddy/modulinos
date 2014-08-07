@@ -1,4 +1,4 @@
-#!/bin/csh
+#!/usr/bin/env csh
 
 set MEANING_OF_LIFE=42
 
