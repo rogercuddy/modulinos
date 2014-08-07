@@ -1,4 +1,4 @@
-#!/bin/ksh
+#!/usr/bin/env ksh
 
 meaning_of_life() {
   return 42
