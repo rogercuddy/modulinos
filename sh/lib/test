@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 path=$(dirname -- "$0")
 . "$path/scriptedmain"
