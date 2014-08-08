@@ -1,6 +1,6 @@
 #!/usr/bin/env csh
 
-set MEANING_OF_LIFE=42
+setenv MEANING_OF_LIFE 42
 
 alias main "echo 'Main: The meaning of life is $MEANING_OF_LIFE'"
 
