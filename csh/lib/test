@@ -1,7 +1,5 @@
 #!/usr/bin/env csh
 
-set sourced=($_)
-
 set path=`dirname -- $0`
 source "$path/scriptedmain"
 

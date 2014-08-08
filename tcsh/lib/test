@@ -1,7 +1,5 @@
 #!/usr/bin/env tcsh
 
-set sourced=($_)
-
 set path=`dirname -- $0`
 source "$path/scriptedmain"
 
