@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 path="${0%/*}"
-source "$path/scriptedmain"
+. "$path/scriptedmain"
 
 main() {
   meaning_of_life
