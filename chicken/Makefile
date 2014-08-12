@@ -1,3 +1,4 @@
+SCRIPTED_MAIN_OBJ=scriptedmain.so
 SCRIPTED_MAIN=bin/scriptedmain
 TEST=bin/test
 
@@ -13,7 +14,10 @@ $(SCRIPTED_MAIN): scriptedmain.scm
 	mkdir -p bin/
 	csc $(FLAGS) -o $(SCRIPTED_MAIN) scriptedmain.scm
 
-$(TEST): test.scm scriptedmain.scm
+$(SCRIPTED_MAIN_OBJ): scriptedmain.scm
+	csc -dynamic $(FLAGS) scriptedmain.scm
+
+$(TEST): test.scm $(SCRIPTED_MAIN_OBJ)
 	mkdir -p bin/
 	csc $(FLAGS) -o $(TEST) test.scm
 

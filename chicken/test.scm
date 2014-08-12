@@ -4,7 +4,7 @@
 (use srfi-13) ; strings
 
 (define (main args)
-  (load "scriptedmain.scm")
+	(load "scriptedmain")
   (display (format "Test: The meaning of life is ~a\n" (meaning-of-life))))
 
 (define (program)
