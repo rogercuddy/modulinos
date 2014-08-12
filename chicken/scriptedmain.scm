@@ -19,9 +19,7 @@
       (cons 'compiled (car (argv)))))
 
 (let ((prog (program)))
-	(display (format "CDR Prog: ~a\n" (cdr prog)))
-
 	(if (and
 			 (equal? (car prog) 'compiled)
-			 (string-match (cdr prog) ".*(\\/)?scriptedmain$"))
+			 (string-match ".*scriptedmain.*" (cdr prog)))
 			(main (cdr (argv)))))
