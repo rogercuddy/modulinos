@@ -1,7 +1,9 @@
-#!/usr/bin/env csi -ss
+":"; exec csi -ss $0
 
-(use srfi-1) ; lists
+(require-extension srfi-1) ; lists
 (use srfi-13) ; strings
+
+(define (meaning-of-life) 42)
 
 (define (main args)
   (display (format "Main: The meaning of life is ~a\n" (meaning-of-life))))
@@ -16,5 +18,3 @@
 
 (if (equal? (car (program)) 'compiled)
     (main (cdr (argv))))
-
-(define (meaning-of-life) 42)
