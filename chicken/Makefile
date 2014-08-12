@@ -23,3 +23,4 @@ $(TEST): test.scm $(SCRIPTED_MAIN_OBJ)
 
 clean:
 	-rm -rf bin/
+	-rm *.so

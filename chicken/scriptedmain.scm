@@ -1,7 +1,9 @@
 ":"; exec csi -ss $0
 
-(require-extension srfi-1) ; lists
+(declare (uses chicken-syntax))
+(use srfi-1) ; lists
 (use srfi-13) ; strings
+(use regex)
 
 (define (meaning-of-life) 42)
 
@@ -16,5 +18,10 @@
             (cons 'unknown "")))
       (cons 'compiled (car (argv)))))
 
-(if (equal? (car (program)) 'compiled)
-    (main (cdr (argv))))
+(let ((prog (program)))
+	(display (format "CDR Prog: ~a\n" (cdr prog)))
+
+	(if (and
+			 (equal? (car prog) 'compiled)
+			 (string-match (cdr prog) ".*(\\/)?scriptedmain$"))
+			(main (cdr (argv)))))
