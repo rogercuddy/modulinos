@@ -10,6 +10,8 @@
 @end
 
 int __attribute__((weak)) main() {
+  NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+
    NSLog(
      @"%@",
      [NSString
@@ -18,6 +20,8 @@ int __attribute__((weak)) main() {
        [ScriptedMain meaningOfLife]
      ]
    );
+
+   [pool drain];
 
   return 0;
 }

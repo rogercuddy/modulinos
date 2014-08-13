@@ -2,6 +2,8 @@
 #import "ScriptedMain.h"
 
 int main() {
+  NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+
    NSLog(
      @"%@",
      [NSString
@@ -10,6 +12,8 @@ int main() {
        [ScriptedMain meaningOfLife]
      ]
    );
+
+   [pool drain];
 
   return 0;
 }
