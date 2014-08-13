@@ -1,4 +1,4 @@
-":"; exec csi -ss $0
+":"; exec csi -ss $0 ${1+"$@"}
 
 (declare (uses chicken-syntax))
 
@@ -18,8 +18,7 @@
             (cons 'unknown "")))
       (cons 'compiled (car (argv)))))
 
-(let ((prog (program)))
-	(if (and
-			 (equal? (car prog) 'compiled)
-			 (string-match ".*test.*" (cdr prog)))
-			(main (cdr (argv)))))
+(cond-expand
+ (chicken-compile-shared)
+ (compiling (main (command-line-arguments)))
+ (else))
