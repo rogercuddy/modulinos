@@ -13,5 +13,5 @@ Then(/^the output reflects the caller$/) do
     value = 'Test'
   end
 
-  @cucumber[:output].should =~ /^#{value}:\s/
+  expect(@cucumber[:output]).to match(/^#{value}:\s/)
 end
