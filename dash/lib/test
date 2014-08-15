@@ -8,6 +8,8 @@ main() {
   echo "Test: The meaning of life is $?"
 }
 
-if [ "$0" = */test ]; then
+case "$0" in
+  */test)
     main
-fi
+    ;;
+esac

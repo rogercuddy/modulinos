@@ -7,6 +7,9 @@ function main
   echo "Test: The meaning of life is $MEANING_OF_LIFE"
 end
 
+# string match conditionals may not be combined in fish 2.0.0
 if [ "$_" = */test ]
     main
+else if [ "$_" = ./*test ]
+  main
 end

@@ -9,8 +9,8 @@ main() {
   echo "Main: The meaning of life is $?"
 }
 
-
-
-if [ "$0" = */scriptedmain ]; then
+case "$0" in
+  */scriptedmain)
     main
-fi
+    ;;
+esac
