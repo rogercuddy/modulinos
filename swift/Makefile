@@ -9,9 +9,9 @@ bin/ScriptedMain: ScriptedMain.swift
 ScriptedMain.swiftmodule: ScriptedMain.swift
 	swiftc -emit-module ScriptedMain.swift
 
-bin/Test: Test.swift ScriptedMain.swiftmodule
+bin/Test: Test.swift ScriptedMain.swift ScriptedMain.swiftmodule
 	mkdir -p bin/
-	swiftc -D TEST -o bin/Test Test.swift ScriptedMain.swiftmodule
+	swiftc -D TEST -o bin/Test Test.swift
 
 clean:
 	-rm -rf bin/
