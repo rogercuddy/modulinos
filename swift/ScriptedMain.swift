@@ -1,15 +1,15 @@
-#if SCRIPTEDMAIN
-class ScriptedMain {
-  public var meaningOfLife = 42
-}
-#else
+import Foundation
+
 public class ScriptedMain {
   public var meaningOfLife = 42
 }
-#endif
 
 #if SCRIPTEDMAIN
-var meaning = ScriptedMain().meaningOfLife
+@objc class ScriptedMainAutoload {
+  @objc class func load() {
+    var meaning = ScriptedMain().meaningOfLife
 
-println("Main: The meaning of life is \(meaning)")
+    println("Main: The meaning of life is \(meaning)")
+  }
+}
 #endif

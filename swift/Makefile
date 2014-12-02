@@ -11,7 +11,7 @@ ScriptedMain.swiftmodule: ScriptedMain.swift
 
 bin/Test: Test.swift ScriptedMain.swiftmodule
 	mkdir -p bin/
-	swiftc -D TEST -o bin/Test Test.swift ScriptedMain.swift
+	swiftc -D TEST -o bin/Test Test.swift ScriptedMain.swiftmodule
 
 clean:
 	-rm -rf bin/
