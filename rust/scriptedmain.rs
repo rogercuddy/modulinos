@@ -1,13 +1,16 @@
-#[link(name = "scriptedmain")];
+//! Modulino
 
-extern mod std;
+#![crate_id(name = "scriptedmain")]
 
-use std::io::println;
+extern crate std;
 
+// A dummy function to import into test.rs
 pub fn meaning_of_life() -> int {
+  //! The answer to life, the universe, and everything.
 	return 42;
 }
 
+#[allow(dead_code)]
 fn main() {
-	println("Main: The meaning of life is " + meaning_of_life().to_str());
+	println!("Main: The meaning of life is {}", meaning_of_life().to_str());
 }
