@@ -3,6 +3,8 @@ import Foundation
 public class ScriptedMain {
   public var meaningOfLife = 42
 
+  init() {}
+
   public class func main() {
     var meaning = ScriptedMain().meaningOfLife
 

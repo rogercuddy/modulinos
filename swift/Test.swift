@@ -1,4 +1,5 @@
 import Foundation
+import ScriptedMain
 
 public class Test {
   public class func main() {
