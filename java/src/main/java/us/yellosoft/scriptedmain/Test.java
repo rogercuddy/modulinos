@@ -1,3 +1,5 @@
+package us.yellosoft.scriptedmain;
+
 /** Test script */
 public final class Test {
   /** utility class */
