@@ -3,7 +3,7 @@ import ScriptedMain
 
 public class Test {
   public class func main() {
-    var meaning = ScriptedMain().meaningOfLife
+    var meaning = ScriptedMain.meaningOfLife()
 
     println("Test: The meaning of life is \(meaning)")
   }
