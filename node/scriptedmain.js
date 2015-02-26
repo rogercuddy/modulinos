@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+"use strict";
+
 function meaningOfLife() { return 42; }
 
 exports.meaningOfLife = meaningOfLife;
