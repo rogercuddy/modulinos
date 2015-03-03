@@ -7,18 +7,20 @@ A modulino in Haskell
 ## Dotslashed
 
 ```
-$ ./ScriptedMain.hs 
+$ ./ScriptedMain.hs
 Main: The meaning of life is 42
-$ ./Test.hs 
+
+$ ./Test.hs
 Test: The meaning of life is 42
 ```
 
 ## Interpreted
 
 ```
-$ runhaskell ScriptedMain.hs 
+$ runhaskell ScriptedMain.hs
 Main: The meaning of life is 42
-$ runhaskell Test.hs 
+
+$ runhaskell Test.hs
 Test: The meaning of life is 42
 ```
 

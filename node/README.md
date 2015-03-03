@@ -5,9 +5,10 @@ An example modulino in Node.js
 # EXAMPLE
 
 ```
-$ node scriptedmain.js 
+$ node scriptedmain.js
 Main: The meaning of life is 42
-$ node test.js 
+
+$ node test.js
 Test: The meaning of life is 42
 ```
 

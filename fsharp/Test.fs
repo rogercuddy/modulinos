@@ -1,5 +1,5 @@
 module Test =
-    open ScriptedMain
+  open ScriptedMain
 
-    let main =
-        printfn "Test: The meaning of life is %d" ScriptedMain.meaningOfLife
+  let main =
+    printfn "Test: The meaning of life is %d" ScriptedMain.meaningOfLife

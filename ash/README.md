@@ -5,8 +5,9 @@ A modulino in `ash`
 # EXAMPLE
 
 ```
-$ ash lib/scriptedmain 
+$ ash lib/scriptedmain
 Main: The meaning of life is 42
-$ ash lib/test 
+
+$ ash lib/test
 Test: The meaning of life is 42
 ```

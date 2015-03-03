@@ -13,7 +13,7 @@ import scriptedmain;
 import std.stdio;
 
 version (test) {
-	void main(const string[] args) {
-		writeln("Test: The meaning of life is ", meaningOfLife());
-	}
+  void main(const string[] args) {
+    writeln("Test: The meaning of life is ", meaningOfLife());
+  }
 }

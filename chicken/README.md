@@ -7,18 +7,20 @@ A modulino in Chicken
 ## Dotslashed
 
 ```
-$ ./scriptedmain.scm 
+$ ./scriptedmain.scm
 Main: The meaning of life is 42
-$ ./test.scm 
+
+$ ./test.scm
 Test: The meaning of life is 42
 ```
 
 ## Interpreted
 
 ```
-$ csi -ss scriptedmain.scm 
+$ csi -ss scriptedmain.scm
 Main: The meaning of life is 42
-$ csi -ss test.scm 
+
+$ csi -ss test.scm
 Test: The meaning of life is 42
 ```
 

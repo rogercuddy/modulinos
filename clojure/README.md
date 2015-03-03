@@ -7,17 +7,19 @@ A modulino in Clojure
 ## Dotslashed
 
 ```
-$ ./scriptedmain.clj 
+$ ./scriptedmain.clj
 Main: The meaning of life is 42
-$ ./test.clj 
+
+$ ./test.clj
 Test: The meaning of life is 42
 ```
 
 ## Interpreted
 
 ```
-$ lein exec scriptedmain.clj 
+$ lein exec scriptedmain.clj
 Main: The meaning of life is 42
+
 $ lein exec test.clj
 Test: The meaning of life is 42
 ```

@@ -9,5 +9,5 @@ main() {
 }
 
 if [[ "$0" == */test ]]; then
-    main
+  main
 fi
