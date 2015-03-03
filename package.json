@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/scriptedmain/scriptedmain.git"
+    "url": "git://github.com/mcandre/scriptedmain.git"
   },
   "author": "Andrew Pennebaker <andrew.pennebaker@gmail.com> (http://www.yellosoft.us/)",
   "directories": {
