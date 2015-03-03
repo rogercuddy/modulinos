@@ -4,3 +4,4 @@ bin/
 *.class
 Gemfile.lock
 tmp/
+node_modules/
