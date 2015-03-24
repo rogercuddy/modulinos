@@ -30,7 +30,8 @@ task :lint => [
   :flog,
   :churn,
   :lili,
-  :editorconfig
+  :editorconfig,
+  :astyle_dry
 ] do
 end
 
