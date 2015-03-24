@@ -5,3 +5,4 @@ bin/
 Gemfile.lock
 tmp/
 node_modules/
+*.orig
