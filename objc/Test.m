@@ -4,16 +4,16 @@
 int main() {
   NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 
-   NSLog(
-     @"%@",
-     [NSString
-       stringWithFormat:
-                 @"Test: The meaning of life is %ld",
-       [ScriptedMain meaningOfLife]
-     ]
-   );
+  NSLog(
+    @"%@",
+    [NSString
+     stringWithFormat:
+     @"Test: The meaning of life is %ld",
+     [ScriptedMain meaningOfLife]
+    ]
+  );
 
-   [pool drain];
+  [pool drain];
 
   return 0;
 }

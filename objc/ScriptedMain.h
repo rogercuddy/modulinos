@@ -1,4 +1,4 @@
-@interface ScriptedMain: NSObject
+@interface ScriptedMain : NSObject
 
 + (NSInteger) meaningOfLife;
 
