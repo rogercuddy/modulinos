@@ -36,13 +36,28 @@ task :pep8 => [] do
   sh 'find . -name node_modules -prune -o -name bower_components -prune -o -name "*.py" -exec pep8 {} \\;'
 end
 
+task :jshint => [] do
+  sh 'node_modules/jshint/bin/jshint .'
+end
+
+task :jslint => [] do
+  sh 'find . -type d -name node_modules -prune -o -type d -name bower_components -prune -o -type f -name "*[-.]min.js" -prune -o -type f -name "*.bat" -prune -o -type f -name "*.js" -exec node_modules/jslint/bin/jslint.js {} \\;'
+end
+
+task :eslint => [] do
+  sh 'node_modules/eslint/bin/eslint.js .'
+end
+
 task :lint => [
   :flog,
   :churn,
   :lili,
   :editorconfig,
   :astyle,
-  :pep8
+  :pep8,
+  :jshint,
+  :jslint,
+  :eslint
 ] do
 end
 
