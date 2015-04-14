@@ -3,4 +3,4 @@
 use lib '.';
 use ScriptedMain;
 
-print "Test: The meaning of life is " ~ meaning_of_life() ~ "\n";
+say 'Test: The meaning of life is ' ~ meaning_of_life();

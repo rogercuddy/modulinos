@@ -8,5 +8,5 @@ module ScriptedMain {
 
 sub MAIN {
   import ScriptedMain;
-  print "Main: The meaning of life is " ~ meaning_of_life() ~ "\n";
+  say 'Main: The meaning of life is ' ~ meaning_of_life();
 }
