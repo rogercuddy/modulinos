@@ -1,5 +1,5 @@
 module Test =
-  open ScriptedMain
+  open Modulino
 
   let main =
-    printfn "Test: The meaning of life is %d" ScriptedMain.meaningOfLife
+    printfn "Test: The meaning of life is %d" Modulino.meaningOfLife

@@ -1,5 +1,8 @@
+task :default => [:test] do
+end
+
 task :test => [] do
-  sh 'ruby scriptedmain.rb'
+  sh 'ruby modulino.rb'
   sh 'ruby test.rb'
 end
 

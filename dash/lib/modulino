@@ -1,0 +1,18 @@
+#!/usr/bin/env dash
+
+meaning_of_life() {
+  return 42
+}
+
+main() {
+  meaning_of_life
+  echo "Main: The meaning of life is $?"
+}
+
+
+
+case "$0" in
+  */modulino)
+    main
+    ;;
+esac

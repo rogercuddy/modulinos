@@ -1,5 +1,5 @@
 #!/usr/bin/env coffee
 
-sm = require "./scriptedmain"
+sm = require "./modulino"
 
 console.log "Test: The meaning of life is " + sm.meaningOfLife()

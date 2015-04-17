@@ -1,7 +1,7 @@
 all: test
 
 test: compile
-	erl -noshell -s scriptedmain
+	erl -noshell -s modulino
 	erl -noshell -s test
 
 compile:

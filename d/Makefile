@@ -1,19 +1,19 @@
 FLAGS=-w -wi
 
-SCRIPTED_MAIN=bin/scriptedmain
+MODULINO=bin/modulino
 TEST=bin/text
 
-all: $(SCRIPTED_MAIN) $(TEST)
-	$(SCRIPTED_MAIN)
+all: $(MODULINO) $(TEST)
+	$(MODULINO)
 	$(TEST)
 
-$(SCRIPTED_MAIN): scriptedmain.d
+$(MODULINO): modulino.d
 	mkdir -p bin/
-	dmd $(FLAGS) -of$(SCRIPTED_MAIN) scriptedmain.d -version=scriptedmain
+	dmd $(FLAGS) -of$(MODULINO) modulino.d -version=modulino
 
-$(TEST): test.d scriptedmain.d
+$(TEST): test.d modulino.d
 	mkdir -p bin/
-	dmd $(FLAGS) -of$(TEST) test.d scriptedmain.d -version=test
+	dmd $(FLAGS) -of$(TEST) test.d modulino.d -version=test
 
 clean:
 	-rm -rf bin/

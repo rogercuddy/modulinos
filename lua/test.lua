@@ -1,10 +1,10 @@
 #!/usr/bin/env lua
 
-require("scriptedmain")
+require("modulino")
 
 local main
 main = function(arg)
-  print("Test: The meaning of life is " .. ScriptedMain.meaningOfLife())
+  print("Test: The meaning of life is " .. Modulino.meaningOfLife())
 end
 
 if type(package.loaded[(...)]) ~= "userdata" then

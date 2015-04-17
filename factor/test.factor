@@ -1,6 +1,6 @@
 #!/usr/bin/env factor
 
-INCLUDING: scriptedmain ;
+INCLUDING: modulino ;
 USING: io math.parser ;
 IN: test
 

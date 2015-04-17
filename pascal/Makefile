@@ -1,13 +1,13 @@
-all: scriptedmain
+all: modulino
 
-scriptedmain: scriptedmain.pas
-	fpc -dscriptedmain scriptedmain.pas
+modulino: modulino.pas
+	fpc -dmodulino modulino.pas
 
-test: test.pas scriptedmain
+test: test.pas modulino
 	fpc test.pas
 
 clean:
 	-rm test
-	-rm scriptedmain
+	-rm modulino
 	-rm *.o
 	-rm *.ppu

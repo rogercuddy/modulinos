@@ -1,10 +1,10 @@
 {
   "name": "scriptedmain",
-  "description": "modulinos, programs that act as both CLI script and library",
+  "description": "programs that act as both CLI script and library",
   "version": "0.0.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mcandre/mcandre.git"
+    "url": "git://github.com/mcandre/scriptedmain.git"
   },
   "author": "Andrew Pennebaker <andrew.pennebaker@gmail.com> (http://www.yellosoft.us/)",
   "directories": {

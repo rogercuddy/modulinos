@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require './scriptedmain'
+require './modulino'
 
 def main
   puts "Test: The meaning of life is #{meaning_of_life}"

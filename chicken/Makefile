@@ -1,23 +1,23 @@
-SCRIPTED_MAIN_OBJ=scriptedmain.so
-SCRIPTED_MAIN=bin/scriptedmain
+MODULINO_OBJ=modulino.so
+MODULINO=bin/modulino
 TEST=bin/test
 
 FLAGS=-O2
 
 all: test
 
-test: $(SCRIPTED_MAIN) $(TEST)
-	$(SCRIPTED_MAIN)
+test: $(MODULINO) $(TEST)
+	$(MODULINO)
 	$(TEST)
 
-$(SCRIPTED_MAIN): scriptedmain.scm
+$(MODULINO): modulino.scm
 	mkdir -p bin/
-	csc $(FLAGS) -o $(SCRIPTED_MAIN) scriptedmain.scm
+	csc $(FLAGS) -o $(MODULINO) modulino.scm
 
-$(SCRIPTED_MAIN_OBJ): scriptedmain.scm
-	csc -dynamic $(FLAGS) scriptedmain.scm
+$(MODULINO_OBJ): modulino.scm
+	csc -dynamic $(FLAGS) modulino.scm
 
-$(TEST): test.scm $(SCRIPTED_MAIN_OBJ)
+$(TEST): test.scm $(MODULINO_OBJ)
 	mkdir -p bin/
 	csc $(FLAGS) -o $(TEST) test.scm
 

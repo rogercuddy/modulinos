@@ -2,7 +2,7 @@
 
 module Test where
 
-import ScriptedMain hiding (main)
+import Modulino hiding (main)
 
 main :: IO ()
 main = putStrLn $ "Test: The meaning of life is " ++ show meaningOfLife

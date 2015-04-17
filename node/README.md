@@ -1,11 +1,11 @@
-# scriptedmain/node
+# modulinos/node
 
 An example modulino in Node.js
 
 # EXAMPLE
 
 ```
-$ node scriptedmain.js
+$ node modulino.js
 Main: The meaning of life is 42
 
 $ node test.js

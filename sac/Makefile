@@ -1,17 +1,17 @@
-all: scriptedmain
+all: modulino
 
-scriptedmain: ScriptedMain.sac
-	sac2c -o scriptedmain ScriptedMain.sac -Dscriptedmain
+modulino: Modulino.sac
+	sac2c -o modulino Modulino.sac -Dmodulino
 
-test: test.sac ScriptedMain.sac
-	sac2c ScriptedMain.sac
+test: test.sac Modulino.sac
+	sac2c Modulino.sac
 	sac2c -o test test.sac
 
 clean:
 	-rm test
 	-rm test.c
-	-rm libScriptedMainTree.so
-	-rm libScriptedMainMod.so
-	-rm libScriptedMainMod.a
-	-rm scriptedmain
-	-rm scriptedmain.c
+	-rm libModulinoTree.so
+	-rm libModulinoMod.so
+	-rm libModulinoMod.a
+	-rm modulino
+	-rm modulino.c

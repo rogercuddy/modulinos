@@ -1,4 +1,4 @@
-# scriptedmain/clojure
+# modulinos/clojure
 
 A modulino in Clojure
 
@@ -7,7 +7,7 @@ A modulino in Clojure
 ## Dotslashed
 
 ```
-$ ./scriptedmain.clj
+$ ./modulino.clj
 Main: The meaning of life is 42
 
 $ ./test.clj
@@ -17,7 +17,7 @@ Test: The meaning of life is 42
 ## Interpreted
 
 ```
-$ lein exec scriptedmain.clj
+$ lein exec modulino.clj
 Main: The meaning of life is 42
 
 $ lein exec test.clj
@@ -30,11 +30,11 @@ Test: The meaning of life is 42
 $ lein repl
 user=> (set! *compile-path* ".")
 "."
-user=> (compile 'scriptedmain)
-scriptedmain
+user=> (compile 'modulino)
+modulino
 user=> (compile 'test)
 test
-user=> (scriptedmain/-main)
+user=> (modulino/-main)
 Main: The meaning of life is 42
 nil
 user=> (test/-main)

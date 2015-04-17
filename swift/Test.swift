@@ -1,9 +1,9 @@
 import Foundation
-import ScriptedMain
+import Modulino
 
 public class Test {
   public class func main() {
-    var meaning = ScriptedMain().meaningOfLife
+    var meaning = Modulino().meaningOfLife
 
     println("Test: The meaning of life is \(meaning)")
   }

@@ -1,11 +1,11 @@
-# scriptedmain/cl
+# modulinos/cl
 
 A modulino in Common Lisp (CLISP)
 
 # EXAMPLE
 
 ```
-$ ./scriptedmain.lisp
+$ ./modulino.lisp
 Main: The meaning of life is 42
 
 $ ./test.lisp

@@ -2,9 +2,9 @@
 
 ```
 $ mvn package
-$ mvn exec:java -Dexec.mainClass=us.yellosoft.scriptedmain.groovy.ScriptedMain
+$ mvn exec:java -Dexec.mainClass=us.yellosoft.modulino.groovy.Modulino
 Main: The meaning of life is 42
-$ mvn exec:java -Dexec.mainClass=us.yellosoft.scriptedmain.groovy.Test
+$ mvn exec:java -Dexec.mainClass=us.yellosoft.modulino.groovy.Test
 Test: The meaning of life is 42
 ```
 

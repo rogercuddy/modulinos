@@ -1,6 +1,6 @@
 // Copyright (C) YelloSoft
 
-#include "scriptedmain.h"
+#include "modulino.h"
 #include <stdio.h>
 
 extern int meaning_of_life();

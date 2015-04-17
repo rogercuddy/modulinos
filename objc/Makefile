@@ -10,23 +10,23 @@ ifneq ($(OS),Windows_NT)
 	endif
 endif
 
-SCRIPTED_MAIN=bin/scriptedmain
+MODULINO=bin/modulino
 TEST=bin/test
 
-all: $(SCRIPTED_MAIN) $(TEST)
-	$(SCRIPTED_MAIN)
+all: $(MODULINO) $(TEST)
+	$(MODULINO)
 	$(TEST)
 
-$(SCRIPTED_MAIN): ScriptedMain.m ScriptedMain.h
+$(MODULINO): Modulino.m Modulino.h
 	mkdir -p bin/
-	clang $(FLAGS) $(LINUX_FLAGS) -o $(SCRIPTED_MAIN) ScriptedMain.m
+	clang $(FLAGS) $(LINUX_FLAGS) -o $(MODULINO) Modulino.m
 
-$(TEST): Test.m ScriptedMain.m ScriptedMain.h
+$(TEST): Test.m Modulino.m Modulino.h
 	mkdir -p bin/
-	clang $(FLAGS) $(LINUX_FLAGS) -o $(TEST) Test.m ScriptedMain.m
+	clang $(FLAGS) $(LINUX_FLAGS) -o $(TEST) Test.m Modulino.m
 
 oclint:
-	oclint ScriptedMain.m -- $(FLAGS) -o $(SCRIPTED_MAIN)
+	oclint Modulino.m -- $(FLAGS) -o $(MODULINO)
 	oclint Test.m -- $(FLAGS) -o $(TEST)
 
 astyle-apply:
@@ -41,7 +41,7 @@ clean-astyle:
 lint: oclint astyle
 
 valgrind: $(BIN)
-	valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --track-fds=yes --dsymutil=yes ./scriptedmain
+	valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --track-fds=yes --dsymutil=yes ./modulino
 	valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --track-fds=yes --dsymutil=yes ./test
 
 clean: clean-astyle

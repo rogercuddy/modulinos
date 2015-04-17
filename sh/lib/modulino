@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+
+export MEANING_OF_LIFE=42
+
+main() {
+  echo "Main: The meaning of life is $MEANING_OF_LIFE"
+}
+
+case "$0" in
+	*/modulino)
+		main
+		;;
+	*)
+esac

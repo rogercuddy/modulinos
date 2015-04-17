@@ -7,7 +7,7 @@ When(/^it runs$/) do
 end
 
 Then(/^the output reflects the caller$/) do
-  if @cucumber[:caller] =~ /scriptedmain/i
+  if @cucumber[:caller] =~ /modulino/i
     value = 'Main'
   else
     value = 'Test'

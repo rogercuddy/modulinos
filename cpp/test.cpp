@@ -1,7 +1,7 @@
 // Copyright (C) YelloSoft
 
 #include <iostream>
-#include "./scriptedmain.h"
+#include "./modulino.h"
 using std::cout;
 using std::endl;
 

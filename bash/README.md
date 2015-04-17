@@ -1,11 +1,11 @@
-# scriptedmain/bash
+# modulinos/bash
 
 A modulino in `bash`
 
 # EXAMPLE
 
 ```
-$ bash lib/scriptedmain
+$ bash lib/modulino
 Main: The meaning of life is 42
 
 $ bash lib/test

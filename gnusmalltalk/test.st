@@ -2,7 +2,7 @@
 "exit"
 
 "
-First install the ScriptedMain package:
+First install the Modulino package:
 
 $ gst-package -t ~/.st package.xml &>/dev/null
 
@@ -12,6 +12,6 @@ $ ./test.st
 Test: The meaning of life is 42
 "
 
-PackageLoader fileInPackage: 'ScriptedMain'.
+PackageLoader fileInPackage: 'Modulino'.
 
-Transcript show: 'Test: The meaning of life is ', ((ScriptedMain meaningOfLife) printString); cr.
+Transcript show: 'Test: The meaning of life is ', ((Modulino meaningOfLife) printString); cr.

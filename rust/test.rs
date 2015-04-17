@@ -1,8 +1,8 @@
 //! Test importing of modulino
 
-extern crate scriptedmain;
+extern crate modulino;
 
-use scriptedmain::meaning_of_life;
+use modulino::meaning_of_life;
 
 #[allow(dead_code)]
 fn main() {

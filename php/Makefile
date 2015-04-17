@@ -1,5 +1,5 @@
-all: scriptedmain.php test.php
-	php scriptedmain.php
+all: modulino.php test.php
+	php modulino.php
 	php test.php
 
 lint:

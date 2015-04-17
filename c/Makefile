@@ -1,20 +1,20 @@
 CC=clang
 FLAGS=-O2 -Wall -Wextra -Wmost -Weverything
 
-SCRIPTED_MAIN=bin/scriptedmain
+MODULINO=bin/modulino
 TEST=bin/test
 
-all: $(SCRIPTED_MAIN) $(TEST)
-	$(SCRIPTED_MAIN)
+all: $(MODULINO) $(TEST)
+	$(MODULINO)
 	$(TEST)
 
-$(SCRIPTED_MAIN): scriptedmain.c scriptedmain.h
+$(MODULINO): modulino.c modulino.h
 	mkdir -p bin/
-	$(CC) $(FLAGS) -o $(SCRIPTED_MAIN) -DSCRIPTEDMAIN scriptedmain.c
+	$(CC) $(FLAGS) -o $(MODULINO) -DMODULINO modulino.c
 
-$(TEST): test.c scriptedmain.h scriptedmain.c
+$(TEST): test.c modulino.h modulino.c
 	mkdir -p bin/
-	$(CC) $(FLAGS) -o $(TEST) test.c scriptedmain.c
+	$(CC) $(FLAGS) -o $(TEST) test.c modulino.c
 
 cppcheck:
 	cppcheck --quiet --enable=all --suppressions $$HOME/suppressions.cfg .
@@ -36,8 +36,8 @@ clean-astyle:
 
 lint: cppcheck splint vera++ astyle
 
-valgrind: scriptedmain test
-	valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --track-fds=yes --dsymutil=yes ./scriptedmain
+valgrind: modulino test
+	valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --track-fds=yes --dsymutil=yes ./modulino
 	valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --track-fds=yes --dsymutil=yes ./test
 
 clean: clean-astyle

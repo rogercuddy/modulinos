@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 path="${0%/*}"
-. "$path/scriptedmain"
+. "$path/modulino"
 
 main() {
   meaning_of_life
@@ -11,4 +11,3 @@ main() {
 if [[ "$BASH_SOURCE" == "$0" ]]; then
     main
 fi
-

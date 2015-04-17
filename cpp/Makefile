@@ -1,20 +1,20 @@
 CC=clang++
 FLAGS=-std=c++11 -stdlib=libc++ -O2 -Wall -Wextra -Weffc++ -Wmost -Weverything -Wno-c++98-compat
 
-SCRIPTED_MAIN=bin/scriptedmain
+MODULINO=bin/modulino
 TEST=bin/test
 
-all: $(SCRIPTED_MAIN) $(TEST)
-	$(SCRIPTED_MAIN)
+all: $(MODULINO) $(TEST)
+	$(MODULINO)
 	$(TEST)
 
-$(SCRIPTED_MAIN): scriptedmain.cpp scriptedmain.h
+$(MODULINO): modulino.cpp modulino.h
 	mkdir -p bin/
-	$(CC) $(FLAGS) -o $(SCRIPTED_MAIN) -DSCRIPTEDMAIN scriptedmain.cpp
+	$(CC) $(FLAGS) -o $(MODULINO) -DMODULINO modulino.cpp
 
-$(TEST): test.cpp scriptedmain.h scriptedmain.cpp
+$(TEST): test.cpp modulino.h modulino.cpp
 	mkdir -p bin/
-	$(CC) $(FLAGS) -o $(TEST) test.cpp scriptedmain.cpp
+	$(CC) $(FLAGS) -o $(TEST) test.cpp modulino.cpp
 
 cppcheck:
 	cppcheck --quiet --enable=all --suppressions $$HOME/suppressions.cfg .
@@ -39,8 +39,8 @@ clean-astyle:
 
 lint: cppcheck cpplint splint vera++ astyle
 
-valgrind: scriptedmain test
-	valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --track-fds=yes --dsymutil=yes ./scriptedmain
+valgrind: modulino test
+	valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --track-fds=yes --dsymutil=yes ./modulino
 	valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --track-fds=yes --dsymutil=yes ./test
 
 clean: clean-astyle

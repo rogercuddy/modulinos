@@ -1,17 +1,17 @@
-SCRIPTED_MAIN=bin/scriptedmain.exe
+MODULINO=bin/modulino.exe
 TEST=bin/test.exe
 
-all: $(SCRIPTED_MAIN) $(TEST)
-	mono $(SCRIPTED_MAIN)
+all: $(MODULINO) $(TEST)
+	mono $(MODULINO)
 	mono $(TEST)
 
-$(SCRIPTED_MAIN): ScriptedMain.fs
+$(MODULINO): Modulino.fs
 	mkdir -p bin/
-	fsharpc --nologo --out:$(SCRIPTED_MAIN) ScriptedMain.fs
+	fsharpc --nologo --out:$(MODULINO) Modulino.fs
 
-$(TEST): Test.fs ScriptedMain.fs
+$(TEST): Test.fs Modulino.fs
 	mkdir -p bin/
-	fsharpc --nologo --out:$(TEST) ScriptedMain.fs Test.fs
+	fsharpc --nologo --out:$(TEST) Modulino.fs Test.fs
 
 clean:
 	-rm -rf bin/

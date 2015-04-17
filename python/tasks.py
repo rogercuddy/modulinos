@@ -2,7 +2,7 @@ from invoke import run, task
 
 @task
 def test():
-  run("python scriptedmain.py")
+  run("python modulino.py")
   run("python test.py")
 
 @task

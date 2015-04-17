@@ -4,12 +4,12 @@
 // ./test.d
 //
 // Compile:
-// dmd test.d scriptedmain.d -version=test
+// dmd test.d modulino.d -version=test
 //
 // Run:
 // ./test
 
-import scriptedmain;
+import modulino;
 import std.stdio;
 
 version (test) {

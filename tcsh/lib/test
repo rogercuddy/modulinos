@@ -1,7 +1,7 @@
 #!/usr/bin/env tcsh
 
 set path=`dirname -- $0`
-source "$path/scriptedmain"
+source "$path/modulino"
 
 alias main "echo 'Test: The meaning of life is $MEANING_OF_LIFE'"
 

@@ -1,4 +1,4 @@
 include $(GOROOT)/src/Make.inc
-TARG=scriptedmain
-GOFILES=scriptedmain.go
+TARG=modulino
+GOFILES=modulino.go
 include $(GOROOT)/src/Make.cmd

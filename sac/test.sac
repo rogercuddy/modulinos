@@ -1,6 +1,6 @@
 use StdIO: all;
 use Array: all;
-use ScriptedMain: all;
+use Modulino: all;
 
 int main() {
   printf("Test: The meaning of life is %d\n", meaning_of_life());

@@ -1,6 +1,6 @@
 #!/usr/bin/env Rscript
 
-source("scriptedmain.R")
+source("modulino.R")
 
 cat("Test: The meaning of life is", meaningOfLife(), "\n")
 

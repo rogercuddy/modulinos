@@ -2,5 +2,5 @@
 #lang racket
 
 (module+ main
-	(require "scriptedmain.rkt")
+	(require "modulino.rkt")
 	(printf "Test: The meaning of life is ~a\n" (meaning-of-life)))

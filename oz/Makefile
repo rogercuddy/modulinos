@@ -1,20 +1,20 @@
 all: run
 
-run: scriptedmain test
-	./scriptedmain
+run: modulino test
+	./modulino
 	./test
 
-scriptedmain: scriptedmain.oz
-	ozc -x scriptedmain.oz
+modulino: modulino.oz
+	ozc -x modulino.oz
 
-scriptedmain.ozf: scriptedmain.oz
-	ozc -c scriptedmain.oz
+modulino.ozf: modulino.oz
+	ozc -c modulino.oz
 
-test: scriptedmain.ozf test.oz
+test: modulino.ozf test.oz
 	ozc -x test.oz
 
 clean:
 	-rm test
-	-rm scriptedmain
+	-rm modulino
 	-rm *.ozf
 	-rm *.exe

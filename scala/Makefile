@@ -1,12 +1,12 @@
-all: ScriptedMain.class Test.class
-	scala ScriptedMain
+all: Modulino.class Test.class
+	scala Modulino
 	scala Test
 
-ScriptedMain.class: ScriptedMain.scala
-	scalac ScriptedMain.scala
+Modulino.class: Modulino.scala
+	scalac Modulino.scala
 
-Test.class: Test.scala ScriptedMain.scala
-	scalac Test.scala ScriptedMain.scala
+Test.class: Test.scala Modulino.scala
+	scalac Test.scala Modulino.scala
 
 lint: scalaclint
 

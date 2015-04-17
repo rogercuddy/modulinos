@@ -1,4 +1,4 @@
-# scriptedmain/haskell
+# modulinos/haskell
 
 A modulino in Haskell
 
@@ -7,7 +7,7 @@ A modulino in Haskell
 ## Dotslashed
 
 ```
-$ ./ScriptedMain.hs
+$ ./Modulino.hs
 Main: The meaning of life is 42
 
 $ ./Test.hs
@@ -17,7 +17,7 @@ Test: The meaning of life is 42
 ## Interpreted
 
 ```
-$ runhaskell ScriptedMain.hs
+$ runhaskell Modulino.hs
 Main: The meaning of life is 42
 
 $ runhaskell Test.hs
@@ -28,14 +28,14 @@ Test: The meaning of life is 42
 
 ```
 $ make
-ghc -O2 -Wall -fwarn-tabs --make -fforce-recomp -o scriptedmain -main-is ScriptedMain ScriptedMain.hs
-[1 of 1] Compiling ScriptedMain     ( ScriptedMain.hs, ScriptedMain.o )
-Linking scriptedmain ...
+ghc -O2 -Wall -fwarn-tabs --make -fforce-recomp -o modulino -main-is Modulino Modulino.hs
+[1 of 1] Compiling Modulino     ( Modulino.hs, Modulino.o )
+Linking modulino ...
 ghc -O2 -Wall -fwarn-tabs --make -fforce-recomp -o test -main-is Test Test.hs
-[1 of 2] Compiling ScriptedMain     ( ScriptedMain.hs, ScriptedMain.o )
+[1 of 2] Compiling Modulino     ( Modulino.hs, Modulino.o )
 [2 of 2] Compiling Test             ( Test.hs, Test.o )
 Linking test ...
-./scriptedmain
+./modulino
 Main: The meaning of life is 42
 ./test
 Test: The meaning of life is 42
@@ -45,14 +45,14 @@ Test: The meaning of life is 42
 
 ```
 $ ghci
-Prelude> :load ScriptedMain.hs
-[1 of 1] Compiling ScriptedMain     ( ScriptedMain.hs, interpreted )
-Ok, modules loaded: ScriptedMain.
-*ScriptedMain> :load Test.hs
-[1 of 2] Compiling ScriptedMain     ( ScriptedMain.hs, interpreted )
+Prelude> :load Modulino.hs
+[1 of 1] Compiling Modulino     ( Modulino.hs, interpreted )
+Ok, modules loaded: Modulino.
+*Modulino> :load Test.hs
+[1 of 2] Compiling Modulino     ( Modulino.hs, interpreted )
 [2 of 2] Compiling Test             ( Test.hs, interpreted )
-Ok, modules loaded: ScriptedMain, Test.
-*Test> ScriptedMain.main
+Ok, modules loaded: Modulino, Test.
+*Test> Modulino.main
 Main: The meaning of life is 42
 *Test> Test.main
 Test: The meaning of life is 42

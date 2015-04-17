@@ -1,22 +1,22 @@
-EXECUTABLE_SM=scriptedmain
-EXECUTABLE_TEST=test
+MODULINO=modulino
+TEST=test
 
-all: test.ll scriptedmain.s
+all: test.ll modulino.s
 	llvm-as test.ll
 	llc -disable-cfi test.bc
-	gcc -o $(EXECUTABLE_TEST) test.s scriptedmain.s
-	./$(EXECUTABLE_TEST)
+	gcc -o $(TEST) test.s modulino.s
+	./$(TEST)
 
-scriptedmain.s: scriptedmain.ll
-	llvm-as scriptedmain.ll
-	llc -disable-cfi scriptedmain.bc
-	gcc -o $(EXECUTABLE_SM) scriptedmain.s
-	./$(EXECUTABLE_SM)
+modulino.s: modulino.ll
+	llvm-as modulino.ll
+	llc -disable-cfi modulino.bc
+	gcc -o $(MODULINO) modulino.s
+	./$(MODULINO)
 
 clean:
-	-rm $(EXECUTABLE_TEST)
-	-rm $(EXECUTABLE_SM)
+	-rm $(TEST)
+	-rm $(MODULINO)
 	-rm test.s
 	-rm test.bc
-	-rm scriptedmain.s
-	-rm scriptedmain.bc
+	-rm modulino.s
+	-rm modulino.bc

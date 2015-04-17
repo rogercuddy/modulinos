@@ -1,11 +1,11 @@
-# scriptedmain/ruby
+# modulinos/ruby
 
 A modulino in Ruby
 
 # EXAMPLE
 
 ```
-$ ruby scriptedmain.rb
+$ ruby modulino.rb
 Main: The meaning of life is 42
 $ ruby test.rb
 Test: The meaning of life is 42

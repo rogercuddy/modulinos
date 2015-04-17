@@ -1,5 +1,5 @@
 #import <Foundation/Foundation.h>
-#import "ScriptedMain.h"
+#import "Modulino.h"
 
 int main() {
   NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
@@ -9,7 +9,7 @@ int main() {
     [NSString
      stringWithFormat:
      @"Test: The meaning of life is %ld",
-     [ScriptedMain meaningOfLife]
+     [Modulino meaningOfLife]
     ]
   );
 

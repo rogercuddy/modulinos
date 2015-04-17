@@ -1,15 +1,15 @@
 FLAGS=-O -W missing-doc -W non-uppercase-statics -W unnecessary-qualification -W unnecessary-typecast -W unused-result
 
-all: bin/scriptedmain bin/test
-	bin/scriptedmain
+all: bin/modulino bin/test
+	bin/modulino
 	bin/test
 
-bin/scriptedmain: scriptedmain.rs
+bin/modulino: modulino.rs
 	mkdir -p bin/
-	rustc -o bin/scriptedmain scriptedmain.rs $(FLAGS)
+	rustc -o bin/modulino modulino.rs $(FLAGS)
 
-bin/test: test.rs scriptedmain.rs
-	rustc --crate-type=lib scriptedmain.rs $(FLAGS)
+bin/test: test.rs modulino.rs
+	rustc --crate-type=lib modulino.rs $(FLAGS)
 	rustc -o bin/test test.rs -L . $(FLAGS)
 
 clean:

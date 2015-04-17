@@ -5,5 +5,5 @@
 
 (defun main ()
  (setq load-path (cons default-directory load-path))
- (load "scriptedmain.el" nil t)
+ (load "modulino.el" nil t)
  (message "Test: The meaning of life is %d" (meaning-of-life)))

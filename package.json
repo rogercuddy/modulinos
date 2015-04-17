@@ -1,6 +1,6 @@
 {
   "name": "scriptedmain",
-  "description": "Programs that only run main() if they're not loaded as libraries by other programs",
+  "description": "programs that only run main() if they're not loaded as libraries by other programs",
   "version": "0.0.0",
   "repository": {
     "type": "git",

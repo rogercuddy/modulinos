@@ -2,6 +2,6 @@
 
 "use strict";
 
-var sm = require("./scriptedmain");
+var modulino = require("./modulino");
 
-console.log("Test: The meaning of life is " + sm.meaningOfLife());
+console.log("Test: The meaning of life is " + modulino.meaningOfLife());

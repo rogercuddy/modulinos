@@ -1,4 +1,4 @@
-# scriptedmain/rust/
+# modulinos/rust/
 
 Rust code snippets for writing modulinos.
 
@@ -7,10 +7,10 @@ Rust code snippets for writing modulinos.
 ```
 $ make
 mkdir -p bin/
-rustc -o bin/scriptedmain scriptedmain.rs -O -W missing-doc -W non-uppercase-statics -W unnecessary-qualification -W unnecessary-typecast -W unused-result
-rustc --crate-type=lib scriptedmain.rs -O -W missing-doc -W non-uppercase-statics -W unnecessary-qualification -W unnecessary-typecast -W unused-result
+rustc -o bin/modulino modulino.rs -O -W missing-doc -W non-uppercase-statics -W unnecessary-qualification -W unnecessary-typecast -W unused-result
+rustc --crate-type=lib modulino.rs -O -W missing-doc -W non-uppercase-statics -W unnecessary-qualification -W unnecessary-typecast -W unused-result
 rustc -o bin/test test.rs -L . -O -W missing-doc -W non-uppercase-statics -W unnecessary-qualification -W unnecessary-typecast -W unused-result
-bin/scriptedmain
+bin/modulino
 Main: The meaning of life is 42
 bin/test
 Test: The meaning of life is 42

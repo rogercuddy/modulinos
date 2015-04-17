@@ -1,11 +1,11 @@
 FLAGS=-O2 -Wall -fwarn-tabs --make -fforce-recomp
 
-all: scriptedmain test
-	./scriptedmain
+all: modulino test
+	./modulino
 	./test
 
-scriptedmain: ScriptedMain.hs
-	ghc $(FLAGS) -o scriptedmain -main-is ScriptedMain ScriptedMain.hs
+modulino: Modulino.hs
+	ghc $(FLAGS) -o modulino -main-is Modulino Modulino.hs
 
 test: Test.hs
 	ghc $(FLAGS) -o test -main-is Test Test.hs
@@ -17,7 +17,7 @@ lint: hlint
 
 clean:
 	-rm test
-	-rm scriptedmain
+	-rm modulino
 	-rm *.exe
 	-rm *.o
 	-rm *.hi

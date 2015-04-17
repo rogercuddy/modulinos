@@ -1,4 +1,4 @@
-# scriptedmain/java
+# modulinos/java
 
 Modulino in Java
 
@@ -6,9 +6,9 @@ Modulino in Java
 
 ```
 $ mvn package
-$ mvn exec:java -Dexec.mainClass=us.yellosoft.scriptedmain.ScriptedMain
+$ mvn exec:java -Dexec.mainClass=us.yellosoft.modulino.Modulino
 Main: The meaning of life is 42
-$ mvn exec:java -Dexec.mainClass=us.yellosoft.scriptedmain.Test
+$ mvn exec:java -Dexec.mainClass=us.yellosoft.modulino.Test
 Test: The meaning of life is 42
 ```
 

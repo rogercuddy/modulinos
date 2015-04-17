@@ -1,7 +1,7 @@
 Feature: Modulino
 
   Scenario: Running programs
-    Given program "scriptedmain.rb"
+    Given program "modulino.rb"
     When it runs
     Then the output reflects the caller
 

@@ -1,17 +1,17 @@
-all: bin/ScriptedMain bin/Test
-	bin/ScriptedMain
+all: bin/Modulino bin/Test
+	bin/Modulino
 	bin/Test
 
-bin/ScriptedMain: ScriptedMain.swift
+bin/Modulino: Modulino.swift
 	mkdir -p bin/
-	swiftc -D SCRIPTEDMAIN -o bin/ScriptedMain ScriptedMain.swift
+	swiftc -D MODULINO -o bin/Modulino Modulino.swift
 
-ScriptedMain.swiftmodule: ScriptedMain.swift
-	swiftc -emit-library -module-name ScriptedMain -emit-module ScriptedMain.swift
+Modulino.swiftmodule: Modulino.swift
+	swiftc -emit-library -module-name Modulino -emit-module Modulino.swift
 
-bin/Test: Test.swift ScriptedMain.swiftmodule
+bin/Test: Test.swift Modulino.swiftmodule
 	mkdir -p bin/
-	swiftc -D TEST -o bin/Test Test.swift -I "." -L "." -lScriptedMain -module-link-name ScriptedMain
+	swiftc -D TEST -o bin/Test Test.swift -I "." -L "." -lModulino -module-link-name Modulino
 
 clean:
 	-rm -rf bin/

@@ -1,10 +1,10 @@
 {
-  "name": "mcandre",
-  "description": "Demo scripts",
+  "name": "modulinos",
+  "description": "programs that only run main() if they're not loaded as libraries by other programs.",
   "version": "0.0.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mcandre/mcandre.git"
+    "url": "git://github.com/mcandre/scriptedmain.git"
   },
   "author": "Andrew Pennebaker <andrew.pennebaker@gmail.com> (http://www.yellosoft.us/)",
   "directories": {

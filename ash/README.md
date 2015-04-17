@@ -1,11 +1,11 @@
-# scriptedmain/ash
+# modulinos/ash
 
 A modulino in `ash`
 
 # EXAMPLE
 
 ```
-$ ash lib/scriptedmain
+$ ash lib/modulino
 Main: The meaning of life is 42
 
 $ ash lib/test

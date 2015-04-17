@@ -1,3 +1,3 @@
-all: ScriptedMain.groovy Test.groovy
-	./ScriptedMain.groovy
+all: Modulino.groovy Test.groovy
+	./Modulino.groovy
 	./Test.groovy

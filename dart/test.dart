@@ -1,7 +1,7 @@
 #!/usr/bin/env dart
 
-#import("scriptedmain.dart", prefix: "scriptedmain");
+#import("modulino.dart", prefix: "modulino");
 
 main() {
-  print("Test: The meaning of life is ${scriptedmain.meaningOfLife()}");
+  print("Test: The meaning of life is ${modulino.meaningOfLife()}");
 }
