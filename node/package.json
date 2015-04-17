@@ -1,10 +1,10 @@
 {
-  "name": "scriptedmain",
+  "name": "modulino",
   "description": "programs that act as both CLI script and library",
   "version": "0.0.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mcandre/scriptedmain.git"
+    "url": "git://github.com/mcandre/modulinos.git"
   },
   "author": "Andrew Pennebaker <andrew.pennebaker@gmail.com> (http://www.yellosoft.us/)",
   "directories": {
@@ -15,7 +15,7 @@
   },
   "scripts": {
     "exec": "exec",
-    "test": "node scriptedmain.js && node test.js"
+    "test": "node modulino.js && node test.js"
   },
   "dependencies": {},
   "devDependencies": {

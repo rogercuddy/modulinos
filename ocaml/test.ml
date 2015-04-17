@@ -5,22 +5,6 @@ fi
 true else 0
 end;;
 
-(*
-
-Interpret:
-
-./test.ml
-
-Compile:
-
-ocamlc -w +a -o test -linkall str.cma modulino.ml test.ml
-
-Run:
-
-./test
-
-*)
-
 let main () = print_endline ("Test: The meaning of life is " ^ string_of_int Modulino.meaning_of_life)
 
 let _ =

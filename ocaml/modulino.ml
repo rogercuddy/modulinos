@@ -5,22 +5,6 @@ fi
 true else 0
 end;;
 
-(*
-
-Interpret:
-
-./modulino.ml
-
-Compile:
-
-ocamlc -w +a -o modulino -linkall str.cma modulino.ml
-
-Run:
-
-./modulino
-
-*)
-
 let meaning_of_life : int = 42
 
 let main () = print_endline ("Main: The meaning of life is " ^ string_of_int meaning_of_life)

@@ -1,10 +1,10 @@
 {
-  "name": "scriptedmain",
+  "name": "modulino",
   "description": "programs that only run main() if they're not loaded as libraries by other programs",
   "version": "0.0.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/mcandre/scriptedmain.git"
+    "url": "git://github.com/mcandre/modulinos.git"
   },
   "author": "Andrew Pennebaker <andrew.pennebaker@gmail.com> (http://www.yellosoft.us/)",
   "directories": {
