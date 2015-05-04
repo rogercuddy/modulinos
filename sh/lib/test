@@ -8,8 +8,8 @@ main() {
 }
 
 case "$0" in
-	*/test)
-		main
-		;;
-	*)
+  */test)
+    main
+    ;;
+  *)
 esac
