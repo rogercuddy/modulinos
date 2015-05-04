@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
 path=$(dirname -- "$0")
 . "$path/modulino"

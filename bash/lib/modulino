@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 meaning_of_life() {
   return 42
@@ -9,6 +9,6 @@ main() {
   echo "Main: The meaning of life is $?"
 }
 
-if [[ "$BASH_SOURCE" == "$0" ]]; then
-    main
+if [ "$BASH_SOURCE" = "$0" ]; then
+  main
 fi

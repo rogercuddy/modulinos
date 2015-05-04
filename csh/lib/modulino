@@ -1,4 +1,4 @@
-#!/usr/bin/env csh
+#!/bin/csh
 
 setenv MEANING_OF_LIFE 42
 

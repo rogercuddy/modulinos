@@ -9,8 +9,6 @@ main() {
   echo "Main: The meaning of life is $?"
 }
 
-
-
 case "$0" in
   */modulino)
     main

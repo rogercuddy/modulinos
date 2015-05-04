@@ -1,13 +1,12 @@
-#!/usr/bin/env zsh
+#!/bin/zsh
 
-path="${0%/*}"
-. "$path/modulino"
+. "${0%/*}/modulino"
 
 main() {
   meaning_of_life
   echo "Test: The meaning of life is $?"
 }
 
-if [[ $zsh_eval_context[-1] == toplevel ]]; then
+if [ $zsh_eval_context[-1] = toplevel ]; then
   main
 fi

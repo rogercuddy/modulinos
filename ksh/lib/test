@@ -1,7 +1,6 @@
-#!/usr/bin/env ksh
+#!/bin/ksh
 
-path="${0%/*}"
-. "$path/modulino"
+. "${0%/*}/modulino"
 
 main() {
   meaning_of_life

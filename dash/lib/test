@@ -1,7 +1,6 @@
 #!/usr/bin/env dash
 
-path="${0%/*}"
-. "$path/modulino"
+. "${0%/*}/modulino"
 
 main() {
   meaning_of_life
@@ -10,6 +9,6 @@ main() {
 
 case "$0" in
   */test)
-  main
-  ;;
+    main
+    ;;
 esac

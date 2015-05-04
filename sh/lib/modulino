@@ -1,6 +1,6 @@
-#!/usr/bin/env sh
+#!/bin/sh
 
-export MEANING_OF_LIFE=42
+export MEANING_OF_LIFE='42'
 
 main() {
   echo "Main: The meaning of life is $MEANING_OF_LIFE"

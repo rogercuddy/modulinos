@@ -1,4 +1,4 @@
-#!/usr/bin/env ksh
+#!/bin/ksh
 
 meaning_of_life() {
   return 42
@@ -10,5 +10,5 @@ main() {
 }
 
 if [[ "$0" == */modulino ]]; then
-    main
+  main
 fi

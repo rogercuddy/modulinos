@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/bin/zsh
 
 meaning_of_life() {
   return 42
@@ -9,6 +9,6 @@ main() {
   echo "Main: The meaning of life is $?"
 }
 
-if [[ $zsh_eval_context[-1] == toplevel ]]; then
+if [ $zsh_eval_context[-1] = toplevel ]; then
   main
 fi
