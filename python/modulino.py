@@ -6,8 +6,8 @@ def meaning_of_life():
 
 
 def main():
-    print("Main: The meaning of life is %s" % meaning_of_life())
+    print('Main: The meaning of life is %s' % meaning_of_life())
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
