@@ -1,0 +1,2 @@
+#!/bin/sh
+java -cp "${0%/*}"/../target/modulino-0.0.1-jar-with-dependencies.jar us.yellosoft.modulino.Test "$@"
