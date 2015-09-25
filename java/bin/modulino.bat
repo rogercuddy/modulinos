@@ -1,1 +1,1 @@
-@java -cp "%~dpn0"\..\target\modulino-0.0.1-jar-with-dependencies.jar us.yellosoft.modulino.Modulino %*
+@java -cp "%~dpn0"\..\build\libs\modulino.jar us.yellosoft.modulino.Modulino %*
