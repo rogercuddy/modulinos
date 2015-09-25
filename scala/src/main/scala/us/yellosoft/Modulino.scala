@@ -1,3 +1,5 @@
+package us.yellosoft.modulino
+
 object Modulino {
   val meaningOfLife = 42
 
