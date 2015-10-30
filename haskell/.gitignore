@@ -1,4 +1,20 @@
-*.exe
+bin/
+# Created by https://www.gitignore.io/api/haskell
+
+### Haskell ###
+dist
+cabal-dev
 *.o
 *.hi
-bin/
+*.chi
+*.chs.h
+*.dyn_o
+*.dyn_hi
+.hpc
+.hsenv
+.cabal-sandbox/
+cabal.sandbox.config
+*.prof
+*.aux
+*.hp
+.stack-work/
