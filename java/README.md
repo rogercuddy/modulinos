@@ -16,3 +16,9 @@ Test: The meaning of life is 42
 
 * [JDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html) 1.7+
 * [Gradle](http://gradle.org/) 2.1+
+
+## Optional
+
+* [Sonar](http://www.sonarqube.org/)
+
+E.g., `brew install gradle sonar sonar-runner`
