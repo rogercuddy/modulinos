@@ -20,5 +20,6 @@ Test: The meaning of life is 42
 ## Optional
 
 * [Sonar](http://www.sonarqube.org/)
+* [Infer](http://fbinfer.com/)
 
-E.g., `brew install gradle sonar sonar-runner`
+E.g., `brew install gradle sonar sonar-runner infer`
