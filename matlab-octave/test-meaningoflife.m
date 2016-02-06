@@ -1,7 +1,8 @@
 #!/usr/bin/env octave -qf
 
 function main()
-  printf("Test: The meaning of life is %d\n", meaningoflife());
+  disp("Test: The meaning of life is ");
+  disp(meaningoflife());
 endfunction
 
 main();
