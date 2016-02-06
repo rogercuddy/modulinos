@@ -5,7 +5,7 @@ function y = meaningoflife()
 endfunction
 
 function main()
-  printf("Main: The meaning of life is %d", meaningoflife());
+  printf("Main: The meaning of life is %d\n", meaningoflife());
 endfunction
 
 main();
