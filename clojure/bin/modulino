@@ -1,0 +1,2 @@
+#!/bin/sh
+java -cp "${0%/*}"/../build/libs/modulinos-all.jar us.yellosoft.modulinos.Modulino "$@"
