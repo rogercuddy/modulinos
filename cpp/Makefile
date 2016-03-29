@@ -17,7 +17,7 @@ $(TEST): test.cpp modulino.h modulino.cpp
 	$(CC) $(FLAGS) -o $(TEST) test.cpp modulino.cpp
 
 cppcheck:
-	cppcheck --quiet --enable=all --suppressions $$HOME/suppressions.cfg .
+	cppcheck --quiet --enable=all --suppressions-list=$$HOME/suppressions.cfg .
 
 cpplint:
 	find . -type f -name '*.cpp' -o -name '*.[ch]' -exec cpplint --filter=-readability/streams,-build/header_guard,-whitespace/parens,-readability/braces,-whitespace/newline,-legal/copyright {} \;
