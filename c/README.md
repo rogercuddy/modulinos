@@ -5,13 +5,29 @@ A modulino in C
 # EXAMPLE
 
 ```
-$ make
-mkdir -p bin/
-clang -O2 -Wall -Wextra -Wmost -Weverything -o bin/modulino -DMODULINO modulino.c
-mkdir -p bin/
-clang -O2 -Wall -Wextra -Wmost -Weverything -o bin/test test.c modulino.c
-bin/modulino
+$ cmake . && make
+
+$ bin/modulino
 Main: The meaning of life is 42
-bin/test
+
+$ bin/modulino-use-test
 Test: The meaning of life is 42
 ```
+
+# REQUIREMENTS
+
+## Compiler Collection
+
+* [clang](http://clang.llvm.org/)
+
+E.g. from Xcode
+
+* [gcc](https://gcc.gnu.org/)
+
+E.g. from Apt, Dnf, Homebrew, MinGW, Strawberry Perl
+
+## CMake
+
+* [cmake](https://cmake.org/)
+
+E.g. `brew install cmake`
