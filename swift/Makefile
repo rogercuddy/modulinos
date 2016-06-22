@@ -18,3 +18,8 @@ clean:
 	-rm *.swiftmodule
 	-rm *.swiftdoc
 	-rm *.dylib
+
+swiftint:
+	swiftlint
+
+lint: swiftlint
