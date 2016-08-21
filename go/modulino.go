@@ -1,11 +1,9 @@
-package modulino
+package main
 
 import "fmt"
 
-func meaningOfLife() int {
-	return 42
-}
+import "./meaningoflife"
 
 func main() {
-	fmt.Println("Main: The meaning of life is", meaningOfLife())
+	fmt.Println("Main: The meaning of life is", meaningoflife.MeaningOfLife())
 }
