@@ -13,5 +13,5 @@ go build -o bin/test test.go
 bin/modulino
 Main: The meaning of life is 42
 bin/test
-Test: The meaning of life is  42
+Test: The meaning of life is 42
 ```
