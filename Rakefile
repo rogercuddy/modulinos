@@ -48,6 +48,10 @@ task :eslint => [] do
   sh 'node_modules/.bin/eslint .'
 end
 
+task :gofmt => [] do
+  sh 'gofmt -s -w .'
+end
+
 task :lint => [
   :flog,
   :churn,
@@ -57,7 +61,8 @@ task :lint => [
   :pep8,
   :jshint,
   :jslint,
-  :eslint
+  :eslint,
+  :gofmt
 ] do
 end
 
