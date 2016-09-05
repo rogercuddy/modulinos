@@ -5,13 +5,16 @@ Go does not support direct modulinos (packages that double as both shared librar
 # EXAMPLE
 
 ```
-$ make
-mkdir -p bin
-go build -o bin/modulino modulino.go
-mkdir -p bin
-go build -o bin/test test.go
-bin/modulino
+$ modulino
 Main: The meaning of life is 42
-bin/test
+$ test
 Test: The meaning of life is 42
+```
+
+# INSTALL
+
+```
+$ go get github.com/mcandre/modulinos/go/modulino
+$ go install github.com/mcandre/modulinos/go/modulino/cmd/modulino
+$ go install github.com/mcandre/modulinos/go/modulino/cmd/test
 ```
