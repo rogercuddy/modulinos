@@ -22,3 +22,8 @@ $(TEST): test.go
 
 clean:
 	-$(RM) bin
+
+gofmt:
+	gofmt -s -w .
+
+lint: gofmt

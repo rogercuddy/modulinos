@@ -1,8 +1,8 @@
 package main
 
 import (
-  "fmt"
-  "github.com/mcandre/modulinos/go/modulino"
+	"fmt"
+	"github.com/mcandre/modulinos/go/modulino"
 )
 
 func main() {
