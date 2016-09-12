@@ -14,7 +14,7 @@ Test: The meaning of life is 42
 # INSTALL
 
 ```
-$ go get github.com/mcandre/modulinos/go/modulino
-$ go install github.com/mcandre/modulinos/go/modulino/cmd/modulino
-$ go install github.com/mcandre/modulinos/go/modulino/cmd/test
+$ go get github.com/mcandre/modulinos/go/modulino/...
 ```
+
+(Yes, include the ellipsis as well, it's the magic Go syntax for downloading, building, and installing all components of a package, including any libraries and command line tools.)
