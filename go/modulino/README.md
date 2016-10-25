@@ -25,3 +25,11 @@ $ go get github.com/mcandre/modulinos/go/modulino/...
 $ sh -c 'cd cmd/modulino && go install'
 $ sh -c 'cd cmd/modulino-test && go install'
 ```
+
+# LINT
+
+Keep the code tidy:
+
+```
+$ make lint
+```
