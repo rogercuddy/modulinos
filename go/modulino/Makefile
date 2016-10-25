@@ -1,3 +1,3 @@
 all:
 	modulino
-	test
+	modulino-test

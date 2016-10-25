@@ -7,7 +7,7 @@ Go does not support direct modulinos (packages that double as both shared librar
 ```
 $ modulino
 Main: The meaning of life is 42
-$ test
+$ modulino-test
 Test: The meaning of life is 42
 ```
 
@@ -18,3 +18,10 @@ $ go get github.com/mcandre/modulinos/go/modulino/...
 ```
 
 (Yes, include the ellipsis as well, it's the magic Go syntax for downloading, building, and installing all components of a package, including any libraries and command line tools.)
+
+# COMPILE AND INSTALL LOCALLY
+
+```
+$ sh -c 'cd cmd/modulino && go install'
+$ sh -c 'cd cmd/modulino-test && go install'
+```
