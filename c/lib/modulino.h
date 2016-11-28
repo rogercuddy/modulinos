@@ -1,8 +1,5 @@
-#ifndef MODULINO_H
-#define MODULINO_H
+#pragma once
 
 // Copyright (C) YelloSOft
 
 int meaning_of_life(void);
-
-#endif
