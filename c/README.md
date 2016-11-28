@@ -1,3 +1,9 @@
+# DEPRECATED
+
+See https://github.com/mcandre/modulinos/tree/master/go
+
+Robust C code requires vigilance, whereas Go automatically solves most of these issues on behalf of the programmer.
+
 # modulinos/c
 
 A modulino in C
