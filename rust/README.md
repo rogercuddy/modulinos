@@ -19,5 +19,3 @@ Test: The meaning of life is 42
 # REQUIREMENTS
 
 * [rust](http://www.rust-lang.org/) 0.12
-
-Example: `brew install rust`

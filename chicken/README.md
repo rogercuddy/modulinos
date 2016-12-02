@@ -53,3 +53,11 @@ Main: The meaning of life is 42
 ; loading modulino.so ...
 Test: The meaning of life is 42
 ```
+
+# REQUIREMENTS
+
+* [Chicken Scheme](https://www.call-cc.org)
+
+## Optional
+
+* [make](https://www.gnu.org/software/make/)

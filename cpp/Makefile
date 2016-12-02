@@ -9,11 +9,11 @@ all: $(MODULINO) $(TEST)
 	$(TEST)
 
 $(MODULINO): modulino.cpp modulino.h
-	mkdir -p bin/
+	mkdir -p bin
 	$(CC) $(FLAGS) -o $(MODULINO) -DMODULINO modulino.cpp
 
 $(TEST): test.cpp modulino.h modulino.cpp
-	mkdir -p bin/
+	mkdir -p bin
 	$(CC) $(FLAGS) -o $(TEST) test.cpp modulino.cpp
 
 cppcheck:
@@ -44,4 +44,4 @@ valgrind: modulino test
 	valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --track-fds=yes --dsymutil=yes ./test
 
 clean: clean-astyle
-	-rm -rf bin/
+	-rm -rf bin

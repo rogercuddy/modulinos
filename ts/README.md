@@ -14,3 +14,7 @@ Main: The meaning of life is 42
 $ node test.js
 Test: The meaning of life is 42
 ```
+
+# REQUIREMENTS
+
+* [TypeScript](https://www.typescriptlang.org)

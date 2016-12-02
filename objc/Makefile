@@ -18,7 +18,7 @@ all: $(MODULINO) $(TEST)
 	$(TEST)
 
 $(MODULINO): Modulino.m Modulino.h
-	mkdir -p bin/
+	mkdir -p bin
 	clang $(FLAGS) $(LINUX_FLAGS) -o $(MODULINO) Modulino.m
 
 $(TEST): Test.m Modulino.m Modulino.h
@@ -48,4 +48,4 @@ valgrind: $(BIN)
 	valgrind --tool=memcheck --leak-check=yes --show-reachable=yes --track-fds=yes --dsymutil=yes ./test
 
 clean: clean-astyle
-	-rm -rf bin/
+	-rm -rf bin
