@@ -1,0 +1,16 @@
+{
+  "name": "modulinos",
+  "description": "example modulinos syntax in a variety of languages",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mcandre/modulinos.git"
+  },
+  "author": "Andrew Pennebaker <andrew.pennebaker@gmail.com>",
+  "engines": {
+    "node": "4.5.0"
+  },
+  "devDependencies": {
+    "editorconfig-tools": ">= 0.1.1"
+  }
+}
