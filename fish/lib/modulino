@@ -3,7 +3,7 @@
 set MEANING_OF_LIFE 42
 
 function main
-  echo "Main: The meaning of life is $MEANING_OF_LIFE"
+    echo "Main: The meaning of life is $MEANING_OF_LIFE"
 end
 
 #
@@ -11,9 +11,9 @@ end
 #
 
 if [ "$_" = */modulino ]
-  main
+    main
 else if [ "$_" = ./*modulino ]
-  main
+    main
 else if [ (echo "$_" | grep 'modulino$') ]
-  main
+    main
 end

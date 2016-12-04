@@ -4,12 +4,12 @@ path="${0%/*}"
 . "$path/modulino"
 
 main() {
-  meaning_of_life
-  echo "Test: The meaning of life is $?"
+    meaning_of_life
+    echo "Test: The meaning of life is $?"
 }
 
 case "$0" in
-  */test)
-  main
-  ;;
+    */test)
+        main
+        ;;
 esac

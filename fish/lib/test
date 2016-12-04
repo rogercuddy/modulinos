@@ -4,7 +4,7 @@ set path (dirname "$_")
 . "$path/modulino"
 
 function main
-  echo "Test: The meaning of life is $MEANING_OF_LIFE"
+    echo "Test: The meaning of life is $MEANING_OF_LIFE"
 end
 
 #
@@ -12,9 +12,9 @@ end
 #
 
 if [ "$_" = */test ]
-  main
+    main
 else if [ "$_" = ./*test ]
-  main
+    main
 else if [ (echo "$_" | grep 'test$') ]
-  main
+    main
 end

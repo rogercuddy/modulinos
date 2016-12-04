@@ -1,15 +1,15 @@
 #!/bin/sh
 
-path=$(dirname -- "$0")
+path="$(dirname -- "$0")"
 . "$path/modulino"
 
 main() {
-  echo "Test: The meaning of life is $MEANING_OF_LIFE"
+    echo "Test: The meaning of life is $MEANING_OF_LIFE"
 }
 
 case "$0" in
-  */test)
-    main
-    ;;
-  *)
+    */test)
+        main
+        ;;
+    *)
 esac

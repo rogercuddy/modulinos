@@ -7,5 +7,5 @@ alias main "echo 'Test: The meaning of life is $MEANING_OF_LIFE'"
 
 switch ("$0")
 case */test:
-  main
+    main
 endsw

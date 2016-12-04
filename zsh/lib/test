@@ -3,10 +3,10 @@
 . "${0%/*}/modulino"
 
 main() {
-  meaning_of_life
-  echo "Test: The meaning of life is $?"
+    meaning_of_life
+    echo "Test: The meaning of life is $?"
 }
 
 if [ $zsh_eval_context[-1] = toplevel ]; then
-  main
+    main
 fi

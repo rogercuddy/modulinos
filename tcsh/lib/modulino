@@ -6,5 +6,5 @@ alias main "echo 'Main: The meaning of life is $MEANING_OF_LIFE'"
 
 switch ("$0")
 case */modulino:
-  main
+    main
 endsw

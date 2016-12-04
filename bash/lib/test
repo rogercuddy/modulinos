@@ -3,10 +3,10 @@
 . "${0%/*}/modulino"
 
 main() {
-  meaning_of_life
-  echo "Test: The meaning of life is $?"
+    meaning_of_life
+    echo "Test: The meaning of life is $?"
 }
 
 if [ "$BASH_SOURCE" = "$0" ]; then
-  main
+    main
 fi
