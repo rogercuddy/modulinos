@@ -1,11 +1,11 @@
-FLAGS=-O -W missing-doc -W non-uppercase-statics -W unnecessary-qualification -W unnecessary-typecast -W unused-result
+FLAGS=-O
 
 all: bin/modulino bin/test
 	bin/modulino
 	bin/test
 
 bin/modulino: modulino.rs
-	mkdir -p bin/
+	mkdir -p bin
 	rustc -o bin/modulino modulino.rs $(FLAGS)
 
 bin/test: test.rs modulino.rs
@@ -13,7 +13,7 @@ bin/test: test.rs modulino.rs
 	rustc -o bin/test test.rs -L . $(FLAGS)
 
 clean:
-	-rm -rf bin/
+	-rm -rf bin
 	-rm -rf *.rlib
 	-rm -rf *.dylib
 	-rm -rf *.dSYM
