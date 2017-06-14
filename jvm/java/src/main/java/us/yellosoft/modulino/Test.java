@@ -6,11 +6,10 @@ public final class Test {
   private Test() {}
 
   /**
-     <p>Test app</p>
-     @param args CLI arguments
+    <p>Test app</p>
+    @param args CLI arguments
   */
   public static void main(final String[] args) {
-    System.out.println("Test: The meaning of life is " +
-                       Modulino.meaningOfLife());
+    System.out.println("Test: The meaning of life is " + Modulino.meaningOfLife());
   }
 }

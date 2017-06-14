@@ -1,8 +1,8 @@
 ":"; exec csi -ss $0 ${1+"$@"}
 
 (define (main args)
-	(load "modulino")
-  (display (format "Test: The meaning of life is ~a\n" (meaning-of-life))))
+ (load "modulino")
+ (display (format "Test: The meaning of life is ~a\n" (meaning-of-life))))
 
 (cond-expand
  (chicken-compile-shared)

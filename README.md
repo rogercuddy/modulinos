@@ -15,3 +15,10 @@ Test: The meaning of life is 42
 http://rosettacode.org/wiki/Modulinos
 
 http://rosettacode.org/wiki/Multiline_shebang
+
+# REQUIREMENTS
+
+## Optional
+
+* [editorconfig-cli](https://github.com/amyboyd/editorconfig-cli) (e.g. `go get github.com/amyboyd/editorconfig-cli`)
+* [flcl](https://github.com/mcandre/flcl) (e.g. `go get github.com/mcandre/flcl/...`)
