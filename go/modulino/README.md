@@ -40,7 +40,7 @@ $ go get github.com/mcandre/modulinos/go/modulino/...
 
 ```
 $ mkdir -p $GOPATH/src/github.com/mcandre
-$ git clone git@github.com:mcandre/modulinos.git $GOPATH/src/github.com/mcandre/modulinos
+$ git clone https://github.com/mcandre/modulinos.git $GOPATH/src/github.com/mcandre/modulinos
 $ sh -c "cd $GOPATH/src/github.com/mcandre/modulinos/go/modulino/cmd/modulino && go install"
 $ sh -c "cd $GOPATH/src/github.com/mcandre/modulinos/go/modulino/cmd/modulino-test && go install"
 ```
