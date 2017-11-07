@@ -7,9 +7,9 @@ main() {
 }
 
 case "$0" in
-    */modulino)
-        main
-        ;;
-    *)
-        ;;
+*/modulino)
+    main
+    ;;
+*) ;;
+
 esac
