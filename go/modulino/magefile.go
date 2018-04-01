@@ -68,4 +68,4 @@ func Lint() error {
 func Install() error { return mageextras.Install() }
 
 // Uninstall deletes installed Go applications.
-func Uninstall() error { return mageextras.Uninstall("gmake") }
+func Uninstall() error { return mageextras.Uninstall("modulino", "modulino-test") }
