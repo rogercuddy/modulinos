@@ -2,68 +2,48 @@
 
 A modulino in Haskell
 
-# EXAMPLES
+# EXAMPLE
 
-## Dotslashed
-
-```
-$ ./Modulino.hs
-Main: The meaning of life is 42
-
-$ ./Test.hs
+```console
+$ modulino-test
 Test: The meaning of life is 42
 ```
 
-## Interpreted
+# RUNTIME REQUIREMENTS
 
-```
-$ runhaskell Modulino.hs
-Main: The meaning of life is 42
+(None)
 
-$ runhaskell Test.hs
-Test: The meaning of life is 42
-```
+# BUILDTIME REQUIREMENTS
 
-## Compiled
+* [GHC Haskell](http://www.haskell.org/) 8+
 
-```
-$ make
-ghc -O2 -Wall -fwarn-tabs --make -fforce-recomp -o modulino -main-is Modulino Modulino.hs
-[1 of 1] Compiling Modulino     ( Modulino.hs, Modulino.o )
-Linking modulino ...
-ghc -O2 -Wall -fwarn-tabs --make -fforce-recomp -o test -main-is Test Test.hs
-[1 of 2] Compiling Modulino     ( Modulino.hs, Modulino.o )
-[2 of 2] Compiling Test             ( Test.hs, Test.o )
-Linking test ...
-./modulino
-Main: The meaning of life is 42
-./test
-Test: The meaning of life is 42
+## Recommended
+
+* [shake](https://shakebuild.com/) (e.g., `cabal install shake`)
+* [hlint](https://hackage.haskell.org/package/hlint) (e.g., `cabal install happy; cabal install hlint`)
+
+# BUILD
+
+```console
+$ cabal install --only-dependencies --enable-documentation
+$ cabal install --only-dependencies --enable-tests
+$ shake
 ```
 
-## Loaded
+# LINT
 
-```
-$ ghci
-Prelude> :load Modulino.hs
-[1 of 1] Compiling Modulino     ( Modulino.hs, interpreted )
-Ok, modules loaded: Modulino.
-*Modulino> :load Test.hs
-[1 of 2] Compiling Modulino     ( Modulino.hs, interpreted )
-[2 of 2] Compiling Test             ( Test.hs, interpreted )
-Ok, modules loaded: Modulino, Test.
-*Test> Modulino.main
-Main: The meaning of life is 42
-*Test> Test.main
-Test: The meaning of life is 42
+```console
+$ shake lint
 ```
 
-# REQUIREMENTS
+# TEST
 
-* [coreutils](https://www.gnu.org/software/coreutils/coreutils.html)
-* [Haskell](https://www.haskell.org)
-* [make](https://www.gnu.org/software/make/)
+```console
+$ shake test
+```
 
-## OPTIONAL
+# PUBLISH
 
-* [hlint](http://hackage.haskell.org/package/hlint)
+```console
+$ shake publish
+```
