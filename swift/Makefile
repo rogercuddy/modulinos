@@ -1,25 +1,23 @@
-all: bin/Modulino bin/Test
-	bin/Modulino
-	bin/Test
+.PHONY: test clean-artifacts clean-infer
 
-bin/Modulino: Modulino.swift
-	mkdir -p bin/
-	swiftc -D MODULINO -o bin/Modulino Modulino.swift
+.build/release/modulino: Package.swift Source/modulino/main.swift Source/modulino-test/main.swift Source/ModulinoFramework/*.swift
+	swift build -c release
 
-Modulino.swiftmodule: Modulino.swift
-	swiftc -emit-library -module-name Modulino -emit-module Modulino.swift
+all: test
 
-bin/Test: Test.swift Modulino.swiftmodule
-	mkdir -p bin/
-	swiftc -D TEST -o bin/Test Test.swift -I "." -L "." -lModulino -module-link-name Modulino
+test: .build/release/modulino
+	.build/release/modulino
+	.build/release/modulino-test
 
-clean:
-	-rm -rf bin/
-	-rm *.swiftmodule
-	-rm *.swiftdoc
-	-rm *.dylib
+clean-artifacts:
+	-rm -rf .build
+
+clean-infer:
+	-rm -rf infer-out
+
+clean: clean-artifacts clean-infer
 
 swiftint:
 	swiftlint
 
-lint: swiftlint
+lint: swiftlint infer
