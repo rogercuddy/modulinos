@@ -6,7 +6,7 @@ let package = Package(
   products: [
     .executable(name: "modulino", targets: ["modulino"]),
     .executable(name: "modulino-test", targets: ["modulino-test"]),
-    .library(name: "ModulinoFramework", targets: ["ModulinoFramework"]),
+    .library(name: "ModulinoFramework", targets: ["ModulinoFramework"])
   ],
   dependencies: [],
   targets: [

@@ -17,7 +17,10 @@ clean-infer:
 
 clean: clean-artifacts clean-infer
 
-swiftint:
+swiftlint:
 	swiftlint
+
+infer: clean
+	infer -- make
 
 lint: swiftlint infer
