@@ -1,4 +1,4 @@
-.PHONY: test clean-artifacts clean-infer
+.PHONY: test clean-artifacts
 
 .build/release/modulino: Package.swift Source/modulino/main.swift Source/modulino-test/main.swift Source/ModulinoFramework/*.swift
 	swift build -c release
@@ -12,15 +12,9 @@ test: .build/release/modulino
 clean-artifacts:
 	-rm -rf .build
 
-clean-infer:
-	-rm -rf infer-out
-
-clean: clean-artifacts clean-infer
+clean: clean-artifacts
 
 swiftlint:
 	swiftlint
 
-infer: clean
-	infer -- make
-
-lint: swiftlint infer
+lint: swiftlint
