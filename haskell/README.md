@@ -16,17 +16,14 @@ Test: The meaning of life is 42
 # BUILDTIME REQUIREMENTS
 
 * [GHC Haskell](http://www.haskell.org/) 8+
-
-## Recommended
-
-* [shake](https://shakebuild.com/) (e.g., `cabal install shake`)
-* [hlint](https://hackage.haskell.org/package/hlint) (e.g., `cabal install happy; cabal install hlint`)
+* [happy](https://hackage.haskell.org/package/happy) (e.g., `cabal install happy`)
 
 # BUILD
 
 ```console
-$ cabal install --only-dependencies --enable-documentation
-$ cabal install --only-dependencies --enable-tests
+$ cabal update
+$ cabal install --force-reinstalls --only-dependencies --enable-documentation
+$ cabal install --force-reinstalls --only-dependencies --enable-tests
 $ shake
 ```
 
