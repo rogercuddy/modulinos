@@ -25,7 +25,7 @@ $ tinyrick uninstall
 $ tinyrick lint
 ```
 
-# RUN ALL TESTS
+# TEST
 
 ```console
 $ tinyrick test
