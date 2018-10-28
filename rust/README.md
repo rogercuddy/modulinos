@@ -1,21 +1,19 @@
-# modulinos/rust/
-
-Rust code snippets for writing modulinos.
+# modulinos: Demo Rust package providing both library functions and binaries
 
 # EXAMPLE
 
-```
-$ make
-mkdir -p bin
-rustc -o bin/modulino modulino.rs -O
-rustc --crate-type=lib modulino.rs -O
-rustc -o bin/test test.rs -L . -O
-bin/modulino
+```console
+$ modulino
 Main: The meaning of life is 42
-bin/test
+
+$ modulino-test
 Test: The meaning of life is 42
 ```
 
-# REQUIREMENTS
+# RUNTIME REQUIREMENTS
 
-* [rust](http://www.rust-lang.org/) 1.16.0+
+(None)
+
+# CONTRIBUTING
+
+For more details on developing modulinos itself, see [DEVELOPMENT.md](DEVELOPMENT.md).

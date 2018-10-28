@@ -3,3 +3,27 @@
 name = "modulinos"
 version = "0.0.1"
 authors = ["Andrew Pennebaker <andrew.pennebaker@gmail.com>"]
+
+[dependencies]
+tinyrick = { version = "0.0.6", optional = true }
+tinyrick_extras = { version = "0.0.1", optional = true }
+
+[features]
+letmeout = ["tinyrick", "tinyrick_extras"]
+
+[lib]
+name = "modulino"
+path = "src/lib/modulino.rs"
+
+[[bin]]
+name = "modulino"
+path = "src/bin/modulino.rs"
+
+[[bin]]
+name = "modulino-test"
+path = "src/bin/modulino-test.rs"
+
+[[bin]]
+name = "rick"
+path = "rick.rs"
+required-features = ["letmeout"]
