@@ -7,34 +7,22 @@ modulinos' own compilation process is compatible with standard cargo. We wrap so
 * [Rust](https://www.rust-lang.org/en-US/) 1.30+
 * [clippy](https://github.com/rust-lang-nursery/rust-clippy)
 
-# INSTALL ARTIFACTS FROM LOCAL SOURCE
+# INSTALL BINARIES FROM LOCAL SOURCE
 
 ```console
 $ tinyrick install
 ```
 
-# UNINSTALL ARTIFACTS
+# UNINSTALL BINARIES
 
 ```console
 $ tinyrick uninstall
 ```
 
-# LINT
+# BUILD: DOC, LINT, TEST, COMPILE
 
 ```console
-$ tinyrick lint
-```
-
-# TEST
-
-```console
-$ tinyrick test
-```
-
-# GENERATE DOCUMENTATION
-
-```console
-$ tinyrick doc
+$ tinyrick [build]
 ```
 
 # PUBLISH
