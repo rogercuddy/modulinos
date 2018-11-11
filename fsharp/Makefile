@@ -6,12 +6,12 @@ all: $(MODULINO) $(TEST)
 	mono $(TEST)
 
 $(MODULINO): Modulino.fs
-	mkdir -p bin/
+	mkdir -p bin
 	fsharpc --nologo --out:$(MODULINO) Modulino.fs
 
 $(TEST): Test.fs Modulino.fs
-	mkdir -p bin/
+	mkdir -p bin
 	fsharpc --nologo --out:$(TEST) Modulino.fs Test.fs
 
 clean:
-	-rm -rf bin/
+	-rm -rf bin
