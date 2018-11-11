@@ -4,24 +4,24 @@
 @implementation Modulino
 
 + (NSInteger) meaningOfLife {
-  return 42;
+    return 42;
 }
 
 @end
 
 int __attribute__((weak)) main() {
-  NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 
-  NSLog(
-    @"%@",
-    [NSString
-     stringWithFormat:
-     @"Main: The meaning of life is %ld",
-     [Modulino meaningOfLife]
-    ]
-  );
+    NSLog(
+        @"%@",
+        [NSString
+            stringWithFormat:
+            @"Main: The meaning of life is %ld",
+            [Modulino meaningOfLife]
+        ]
+    );
 
-  [pool drain];
+    [pool drain];
 
-  return 0;
+    return 0;
 }

@@ -5,7 +5,11 @@ modulinos' own compilation process is compatible with standard cargo. We wrap so
 # BUILDTIME REQUIREMENTS
 
 * [Rust](https://www.rust-lang.org/en-US/) 1.30+
+
+## Recommended
+
 * [clippy](https://github.com/rust-lang-nursery/rust-clippy)
+* [tinyrick](https://github.com/mcandre/tinyrick) (e.g., `cargo install tinyrick`)
 
 # INSTALL BINARIES FROM LOCAL SOURCE
 

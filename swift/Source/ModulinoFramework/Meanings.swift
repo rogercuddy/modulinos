@@ -1,7 +1,7 @@
 import Foundation
 
 public class Meanings {
-  public var meaningOfLife = 42
+    public var meaningOfLife = 42
 
-  public init() {}
+    public init() {}
 }

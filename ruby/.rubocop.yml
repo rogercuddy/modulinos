@@ -1,10 +1,11 @@
+---
 inherit_from: ../.rubocop.yml
 
 LineLength:
-  Max: 130
+    Max: 130
 
 MethodLength:
-  Max: 60
+    Max: 60
 
 CyclomaticComplexity:
-  Max: 20
+    Max: 20

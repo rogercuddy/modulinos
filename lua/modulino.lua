@@ -8,11 +8,11 @@ Modulino.meaningOfLife = meaningOfLife
 
 local main
 main = function(arg)
-  print("Main: The meaning of life is " .. meaningOfLife())
+    print("Main: The meaning of life is " .. meaningOfLife())
 end
 
 if type(package.loaded[(...)]) ~= "userdata" then
-  main(arg)
+    main(arg)
 else
-  module(..., package.seeall)
+    module(..., package.seeall)
 end

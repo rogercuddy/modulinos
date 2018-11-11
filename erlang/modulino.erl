@@ -4,5 +4,5 @@
 meaning_of_life() -> 42.
 
 start() ->
-  io:format("Main: The meaning of life is ~w~n", [meaning_of_life()]),
-  init:stop().
+    io:format("Main: The meaning of life is ~w~n", [meaning_of_life()]),
+    init:stop().

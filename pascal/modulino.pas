@@ -8,11 +8,11 @@ implementation
 {$ENDIF}
 function MeaningOfLife () : integer;
 begin
-  MeaningOfLife := 42
+    MeaningOfLife := 42
 end;
 {$IFDEF modulino}
 begin
-  write('Main: The meaning of life is: ');
-  writeln(MeaningOfLife())
+    write('Main: The meaning of life is: ');
+    writeln(MeaningOfLife())
 {$ENDIF}
 end.

@@ -1,7 +1,7 @@
 program Test;
 uses
-  Modulino;
+    Modulino;
 begin
-  write('Test: The meaning of life is: ');
-  writeln(MeaningOfLife())
+    write('Test: The meaning of life is: ');
+    writeln(MeaningOfLife())
 end.

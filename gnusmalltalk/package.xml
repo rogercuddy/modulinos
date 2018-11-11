@@ -1,7 +1,7 @@
 <packages>
 <package>
-  <name>Modulino</name>
-  <filein>modulino.st</filein>
-  <file>modulino.st</file>
+    <name>Modulino</name>
+    <filein>modulino.st</filein>
+    <file>modulino.st</file>
 </package>
 </packages>

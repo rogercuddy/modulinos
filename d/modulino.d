@@ -14,11 +14,11 @@ module modulino;
 import std.stdio;
 
 int meaningOfLife() {
-  return 42;
+    return 42;
 }
 
 version (modulino) {
-  void main(const string[] args) {
-    writeln("Main: The meaning of life is ", meaningOfLife());
-  }
+    void main(const string[] args) {
+        writeln("Main: The meaning of life is ", meaningOfLife());
+    }
 }
