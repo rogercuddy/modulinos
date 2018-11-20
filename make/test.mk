@@ -1,5 +1,8 @@
+.PHONY: test
+
 all: test
 
-test:
-	@make -f modulino.mk meaning-of-life
+include meaning-of-life.mk
+
+test: meaning-of-life
 	@echo "(Test)"

@@ -1,7 +1,8 @@
+.PHONY: modulino
+
 all: modulino
 
-meaning-of-life:
-	@echo "The meaning of life is 42"
+include meaning-of-life.mk
 
 modulino: meaning-of-life
 	@echo "(Main)"
