@@ -1,5 +1,0 @@
-all: test
-
-test:
-	@make -f modulino.mf meaning-of-life
-	@echo "(Test)"
