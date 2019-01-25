@@ -2,6 +2,11 @@ from invoke import run, task
 
 
 @task
+def safety():
+    run('safety check')
+
+
+@task
 def test():
     run('python modulino.py')
     run('python test.py')
@@ -32,6 +37,6 @@ def bandit():
     run('find . -name \'*.py\' | xargs bandit')
 
 
-@task(pre=[pep8, pylint, pyflakes, flake8, bandit])
+@task(pre=[safety, pep8, pylint, pyflakes, flake8, bandit])
 def lint():
     pass
