@@ -1,3 +1,3 @@
 # REQUIREMENTS
 
-* [Go](http://golang.org/)
+* [Go](http://golang.org/) 1.11+

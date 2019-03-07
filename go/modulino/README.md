@@ -4,7 +4,7 @@ Go does not support direct modulinos (packages that double as both shared librar
 
 # EXAMPLE
 
-```
+```console
 $ modulino
 Main: The meaning of life is 42
 $ modulino-test
@@ -21,7 +21,7 @@ https://godoc.org/github.com/mcandre/modulinos/go/modulino
 
 # BUILDTIME REQUIREMENTS
 
-* [Go](https://golang.org/) 1.9+
+* [Go](https://golang.org/) 1.11+
 
 ## Recommended
 
@@ -30,10 +30,11 @@ https://godoc.org/github.com/mcandre/modulinos/go/modulino
 * [golint](https://github.com/golang/lint) (e.g. `go get github.com/golang/lint/golint`)
 * [errcheck](https://github.com/kisielk/errcheck) (e.g. `go get github.com/kisielk/errcheck`)
 * [nakedret](https://github.com/alexkohler/nakedret) (e.g. `go get github.com/alexkohler/nakedret`)
+* [shadow](golang.org/x/tools/go/analysis/passes/shadow/cmd/shadow) (e.g. `go get -u golang.org/x/tools/go/analysis/passes/shadow/cmd/shadow`)
 
 # INSTALL FROM REMOTE GIT REPOSITORY
 
-```
+```console
 $ go get github.com/mcandre/modulinos/go/modulino/...
 ```
 
@@ -41,7 +42,7 @@ $ go get github.com/mcandre/modulinos/go/modulino/...
 
 # INSTALL FROM LOCAL GIT REPOSITORY
 
-```
+```console
 $ mkdir -p $GOPATH/src/github.com/mcandre
 $ git clone https://github.com/mcandre/modulinos.git $GOPATH/src/github.com/mcandre/modulinos
 $ cd "$GOPATH/sc/github.com/mcandre/modulinos/go/modulino"
@@ -53,6 +54,6 @@ $ go install ./...
 
 Keep the code tidy:
 
-```
+```console
 $ mage lint
 ```
