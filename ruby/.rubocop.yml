@@ -1,5 +1,5 @@
 ---
-inherit_from: ../.rubocop.yml
+inherit_from: "../.rubocop.yml"
 
 LineLength:
   Max: 130
