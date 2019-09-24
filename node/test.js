@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-"use strict";
+'use strict';
 
-var modulino = require("./modulino");
+var modulino = require('./modulino');
 
-console.log("Test: The meaning of life is " + modulino.meaningOfLife());
+console.log('Test: The meaning of life is ' + modulino.meaningOfLife());
