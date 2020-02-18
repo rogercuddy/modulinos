@@ -1,6 +1,8 @@
 #!/usr/bin/env ash
+# shellcheck shell=ash
 
 path="${0%/*}"
+# shellcheck source=/dev/null
 . "$path/modulino"
 
 main() {

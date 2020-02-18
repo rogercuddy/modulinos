@@ -1,0 +1,6 @@
+#!/bin/sh
+
+DIR="${0%/*}"
+
+"${DIR}/../lib/modulino" &&
+    "${DIR}/../lib/test"

@@ -4,23 +4,44 @@ A modulino in `ash`
 
 # EXAMPLE
 
-```
-$ ash lib/modulino
+```console
+$ ./lib/modulino
 Main: The meaning of life is 42
 
-$ ash lib/test
+$ ./lib/test
 Test: The meaning of life is 42
 ```
 
 # REQUIREMENTS
 
-* [dash](http://www.in-ulm.de/~mascheck/various/ash/)
+* [ash](https://linux.die.net/man/1/ash)
 
-## Optional
+## Recommended
 
+* [vast](http://github.com/mcandre/vast)
 * [shfmt](https://github.com/mvdan/sh) (e.g. `go get github.com/mvdan/sh/cmd/shfmt`)
 * [bashate](https://pypi.python.org/pypi/bashate/0.5.1)
 * [shlint](https://rubygems.org/gems/shlint)
 * [checkbashisms](https://sourceforge.net/projects/checkbaskisms/)
 * [ShellCheck](https://hackage.haskell.org/package/ShellCheck)
 * [stank](https://github.com/mcandre/stank) (e.g. `go get github.com/mcandre/stank/...`)
+
+# DEVELOPMENT
+
+## Build: Lint and Test
+
+```console
+$ vast
+```
+
+## Test
+
+```console
+$ vast itest
+```
+
+## Lint
+
+```console
+$ vast lint
+```

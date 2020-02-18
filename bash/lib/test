@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# shellcheck source=/dev/null
 . "${0%/*}/modulino"
 
 main() {
@@ -7,6 +8,6 @@ main() {
     echo "Test: The meaning of life is $?"
 }
 
-if [ "$BASH_SOURCE" = "$0" ]; then
+if [ "${BASH_SOURCE[0]}" = "$0" ]; then
     main
 fi
