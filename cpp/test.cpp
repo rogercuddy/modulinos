@@ -1,6 +1,6 @@
 // Copyright (C) YelloSoft
 
-#include "./modulino.h"
+#include "./modulino.hh"
 
 #include <iostream>
 
