@@ -1,9 +1,8 @@
 // Copyright (C) YelloSoft
 
-#include <iostream>
 #include "./modulino.h"
-using std::cout;
-using std::endl;
+
+#include <iostream>
 
 int meaning_of_life() {
     return 42;
@@ -12,7 +11,7 @@ int meaning_of_life() {
 #ifdef MODULINO
 
 int main() {
-    cout << "Main: The meaning of life is " << meaning_of_life() << endl;
+    std::cout << "Main: The meaning of life is " << meaning_of_life() << std::endl;
     return 0;
 }
 

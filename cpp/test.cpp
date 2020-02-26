@@ -1,13 +1,12 @@
 // Copyright (C) YelloSoft
 
-#include <iostream>
 #include "./modulino.h"
-using std::cout;
-using std::endl;
+
+#include <iostream>
 
 extern int meaning_of_life();
 
 int main() {
-    cout << "Test: The meaning of life is " << meaning_of_life() << endl;
+    std::cout << "Test: The meaning of life is " << meaning_of_life() << std::endl;
     return 0;
 }
