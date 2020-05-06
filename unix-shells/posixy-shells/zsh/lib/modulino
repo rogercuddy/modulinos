@@ -1,5 +1,7 @@
 #!/bin/zsh
 # shellcheck shell=bash
+set -eEuo pipefail
+IFS=$'\n\t '
 
 meaning_of_life() {
     return 42

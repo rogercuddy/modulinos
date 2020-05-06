@@ -1,2 +1,5 @@
 #!/bin/sh
+set -eu
+IFS="$(printf '%b_' '\n\t ')"
+IFS="${IFS%_}"
 java -cp "${0%/*}"/../build/libs/modulinos-all.jar us.yellosoft.modulinos.Test "$@"

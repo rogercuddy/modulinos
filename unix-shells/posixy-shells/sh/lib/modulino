@@ -1,4 +1,7 @@
 #!/bin/sh
+set -eu
+IFS="$(printf '%b_' '\n\t ')"
+IFS="${IFS%_}"
 
 export MEANING_OF_LIFE='42'
 
