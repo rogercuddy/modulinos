@@ -1,14 +1,13 @@
 #!/bin/ksh
+unset IFS
 set -euo pipefail
-IFS=$'\n\t '
 
 meaning_of_life() {
-    return 42
+    echo '42'
 }
 
 main() {
-    meaning_of_life
-    echo "Main: The meaning of life is $?"
+    echo "Main: The meaning of life is $(meaning_of_life)"
 }
 
 if [[ "$0" == */modulino ]]; then

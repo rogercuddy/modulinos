@@ -1,5 +1,4 @@
 #!/bin/sh
+unset IFS
 set -eu
-IFS="$(printf '%b_' '\n\t ')"
-IFS="${IFS%_}"
 java -cp "${0%/*}"/../build/libs/modulino-all.jar us.yellosoft.modulino.Test "$@"

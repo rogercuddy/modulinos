@@ -1,15 +1,14 @@
 #!/bin/zsh
 # shellcheck shell=bash
+unset IFS
 set -eEuo pipefail
-IFS=$'\n\t '
 
 meaning_of_life() {
-    return 42
+    echo '42'
 }
 
 main() {
-    meaning_of_life
-    echo "Main: The meaning of life is $?"
+    echo "Main: The meaning of life is $(meaning_of_life)"
 }
 
 # shellcheck disable=SC2154

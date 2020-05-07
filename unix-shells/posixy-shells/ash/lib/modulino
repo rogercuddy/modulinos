@@ -1,16 +1,14 @@
 #!/usr/bin/env ash
 # shellcheck shell=ash
+unset IFS
 set -eu
-IFS="$(printf '%b_' '\n\t ')"
-IFS="${IFS%_}"
 
 meaning_of_life() {
-    return 42
+    echo '42'
 }
 
 main() {
-    meaning_of_life
-    echo "Main: The meaning of life is $?"
+    echo "Main: The meaning of life is $(meaning_of_life)"
 }
 
 case "$0" in
