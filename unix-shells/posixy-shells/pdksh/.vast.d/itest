@@ -1,0 +1,8 @@
+#!/bin/sh
+unset IFS
+set -euf
+
+DIR="${0%/*}"
+
+"${DIR}/../lib/modulino" &&
+    "${DIR}/../lib/test"

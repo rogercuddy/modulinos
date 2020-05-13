@@ -3,4 +3,4 @@ unset IFS
 set -euf
 
 stank . |
-    xargs shlint
+    xargs shfmt -w -i 4
