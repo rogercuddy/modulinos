@@ -1,6 +1,6 @@
 #!/bin/sh
 unset IFS
-set -eu
+set -euf
 
 export MEANING_OF_LIFE='42'
 

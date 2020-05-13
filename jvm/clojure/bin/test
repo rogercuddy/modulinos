@@ -1,4 +1,4 @@
 #!/bin/sh
 unset IFS
-set -eu
+set -euf
 java -cp "${0%/*}"/../build/libs/modulinos-all.jar us.yellosoft.modulinos.Test "$@"

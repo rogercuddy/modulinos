@@ -1,0 +1,15 @@
+#!/usr/bin/env ksh93
+unset IFS
+set -eufo pipefail
+
+meaning_of_life() {
+    echo '42'
+}
+
+main() {
+    echo "Main: The meaning of life is $(meaning_of_life)"
+}
+
+if [[ "$0" == */modulino ]]; then
+    main
+fi

@@ -1,6 +1,6 @@
 #!/usr/bin/env dash
 unset IFS
-set -eu
+set -euf
 
 meaning_of_life() {
     echo '42'
